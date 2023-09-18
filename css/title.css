@@ -1,0 +1,108 @@
+#title {
+  
+}
+#title h2 {
+  
+}
+#title div.twrap {
+
+}
+#title div.twrap ul {
+  
+}
+#title div.twrap ul .tbox { 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  border-radius: 10px;
+}
+#title div.twrap ul .timg1{
+  background-image: url(../img/twrap1.png);
+}
+#title div.twrap ul .timg2{
+  
+  background-image: url(../img/twrap2.png);
+}
+#title div.twrap ul .timg3{
+  
+  background-image: url(../img/twrap3_1.png);
+}
+#title div.twrap ul .timg4{
+  background-image: url(../img/twrap4.png);
+}
+#title div.twrap ul .timg5{
+  background-image: url(../img/twrap5.png);
+}
+#title div.twrap ul .timg6{
+  background-image: url(../img/twrap6.png);
+}
+#title div.twrap ul .tbox >div{
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 120px;
+  display: inline-flex;
+  transform: translateY(-80px);
+}
+#title div.twrap ul li h3 {  
+  line-height: 1.4;
+}
+#title div.twrap ul .tbox2 h3{
+  color:white;
+}
+#title div.twrap ul .tbox3 h3{
+  color:black;
+}
+#title div.twrap ul li h3 > span {
+  
+}
+#title div.twrap ul li p {  
+  margin: 15px 0px;
+  margin-left: 5px;
+}
+#title div.twrap ul .tbox2 p{
+  color:white;
+}
+#title div.twrap ul .tbox3 p{
+  color:black;
+}
+#title div.twrap ul li a { 
+}
+#title div.twrap ul .tbox2 a{
+  color:black;
+  background-color: white;
+  opacity: .75;
+  width: 150px;
+  height: 50px;
+}
+#title div.twrap ul .tbox2 a:hover{
+  opacity: 1;
+}
+#title div.twrap ul .tbox3 a{
+  color:white;
+  background-color: black;
+  opacity: .75;
+  width: 150px;
+  height: 50px;
+}
+#title div.twrap ul .tbox3 a:hover{
+  opacity: 1;
+}
+#title div.twrap ul .tbox div a> span  {
+  
+}
+/* 타이틀 슬릭 */
+#title .slick-dots li button{
+  
+}
+#title div.twrap ul .slick-dots li{
+  
+}
+#title div.twrap ul .slick-dots li button{
+  
+}
+#title div.twrap ul .slick-dots li.slick-active button::before{
+  padding: 0;
+  top: -1px;
+}

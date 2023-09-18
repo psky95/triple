@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트리플</title>
+
+    <!-- 프리텐다드 폰트적용 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/hotple.css">
+    <link rel="stylesheet" href="css/hotel.css">
+    <link rel="stylesheet" href="css/item.css">
+    <link rel="stylesheet" href="css/travel.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- 제이쿼리 연결 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
+
+     <!-- 햄버거와 애니메이트 css -->
+     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.css'>
+     <link rel="stylesheet" href="css/hamburger.css">
+ 
+     <!-- partial햄버거 -->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+     <script  src="hamburger/script.js"> </script>
+
+     <!-- 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 타이틀 슬릭 애니메이션
+            $('.titleslick').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                fade: true,
+                speed: 1000
+            });
+            // 핫플 슬릭 애니메이션
+            $('.hotpleslick').slick({
+                autoplay: true,
+                autoplaySpeed: 3500,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                speed: 1000
+            });
+            // 일본 인기호텔 영역 슬릭
+            $('.hotelslick').slick({
+                autoplay: true,
+                autoplaySpeed: 3500,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                speed: 1000
+            });
+            // 필수템 최저가 영역 슬릭
+            $('.itemslick').slick({
+                autoplay: true,
+                autoplaySpeed: 3500,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                speed: 1000
+            });
+        });
+        // 핫플레이스 호버 이벤트
+            // $("li .hovergroupbox").hover(function(){
+            //         $(this).find(".hovergroup").css("display", "flex");
+            //     },
+            //     function() {
+            //         $(this).find(".hovergroup").css("display", "none");
+            //     }
+            // );
+            // $("li:gt(0)").hide();
+            // let n=0;
+    </script>
+
+</head>
+<body>
+    <section id="header">
+        <div class="head wrap">
+            <div class="flex flex-between">
+                <h1>
+                    <a class="h2" href="">TRIPLE</a>
+                    <form class="more" action="">
+                        <div class="searchwrap">
+                            <input class="search" type="text" name="q" placeholder="어디로 떠나시나요?">
+                            <span class="search-icon"></span>
+                        </div>
+                    </form>
+                </h1>
+                <ul>
+                    <li><a class="h6" href="">로그인</a></li>
+                    <li><a class="h6" href="">내 예약</a></li>
+                </ul>
+            </div>
+            <div class="hmenu">
+                <ul class="flex">
+                    <li><a class="h6" href="">항공권</a></li>
+                    <li><a class="h6" href="">숙소</a></li>
+                    <li><a class="h6" href="">투어·티켓</a></li>
+                    <li><a class="h6" href="">에어텔·패키지</a></li>
+                    <li><a class="h6" href="">선착순 핫딜</a></li>
+                    <li><a class="h6" href="">여행자 보험</a></li>
+                    <li><a class="h6" href="">렌터카</a></li>
+                    <li><a class="h6" href="">유심·이심</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="title">
+        <div class="twrap wrap padding50">
+            <h2 class="hide">여행지 타이틀 이미지</h2>
+            <div class="tcon">
+                <ul class="titleslick">
+                    <li class="tbox timg1">
+                        <div class="tbox2">
+                            <h3 class="h3">일본 여행 기념품<span class="block">이것만은 꼭!</span></h3>
+                            <p>일본 필수 쇼핑 아이템 총정리</p>
+                            <a class="more" href="">지금 보러가기<span></span></a>
+                        </div>
+                    </li>
+                
+                    <li class="tbox timg2">
+                        <div class="tbox2">
+                            <h3 class="h3">동남아 투어·티켓<span class="block">최대 32% 할인</span></h3>
+                            <p>방콕, 다낭, 나트랑, 싱가포르 등</p>
+                            <a class="more" href="">최저가 보기<span></span></a>
+                        </div>
+                    </li>
+                
+                    <li class="tbox timg3">
+                        <div class="tbox2">
+                            <h3 class="h3">해외에서 놀 때,<span class="block">NOL 카드</span></h3>
+                            <p>해외항공권 최대 39% 할인!</p>
+                            <a class="more" href="">혜택 더보기<span></span></a>
+                        </div>
+                    </li>
+                
+                    <li class="tbox timg4">
+                        <div class="tbox3">
+                            <h3 class="h3">트리플과 함께 하는<span class="block">최저가 탐색</span></h3>
+                            <p>항공권 특가·혜택 모음</p>
+                            <a class="more" href="">지금 보러가기<span></span></a>
+                        </div>
+                    </li>
+                
+                    <li class="tbox timg5">
+                        <div class="tbox3">
+                            <h3 class="h3">아는 사람만 아는<span class="block">세계 곳곳의 핫플</span></h3>
+                            <p>#트립회원만 #알고있자 #소곤소곤</p>
+                            <a class="more" href="">지금 보러가기<span></span></a>
+                        </div>
+                    </li>
+                
+                    <li class="tbox timg6">
+                        <div class="tbox3">
+                            <h3 class="h3">흔하지 않은<span class="block">일본 여행지, 도카이</span></h3>
+                            <p>#오사카? #도쿄? #도카이!</p>
+                            <a class="more" href="">지금 보러가기<span class="block"></span></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="hotple">
+        <div class="wrap paddingB100 paddingT100">
+            <h2 class="h4">인기 도시</h2>
+            <ul class="hotpleslick">
+                <li class="hpbox1 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple1" src="" alt="글리코상이 있는 오사카 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3 class="h5">OSAKA</h3>
+                                    <p class="p">바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">오사카, 교토, 고베, 나라</h4>
+                </li>
+                <li class="hpbox2 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple2" src="" alt="푸른 하늘 아래에 도쿄도시의 전체적인 풍경을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>TOKYO</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">도쿄, 하코네, 요코하마, 가마쿠라</h4>
+                </li>
+                <li class="hpbox3 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple3" src="" alt="사쿠라이 후타미가우라 이토시마의 도리이 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>FUKUOKA</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">후쿠오카, 유후인, 벳푸, 기타큐슈</h4>
+                </li>
+                <li class="hpbox4 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple4" src="" alt="에펠탑이 보이는 풍경을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>PARIS</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">파리, 베르사유, 몽생미셸, 스트라스부르</h4>
+                </li>
+                <li class="hpbox5 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple5" src="" alt="노을이 지고 있는 다낭 해변의 풍경을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>DANANG</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">다낭, 호이안, 후에</h4>
+                </li>
+                <li class="hpbox6 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple6" src="" alt="태국 사원의 풍경을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>BANGKOK</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">방콕, 파타야, 후아힌, 코사멧</h4>
+                </li>
+                <li class="hpbox7 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple7" src="" alt="타이페이의 자유광장을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>TAIPEI</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">타이베이, 이란</h4>
+                </li>
+                <li class="hpbox8 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <span class="hotple8"></span>
+                            <div class="nothovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>전체도시</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="hotel">
+        <div class="wrap paddingT100 paddingB100">
+            <h2 class="h4">일본 인기 호텔</h2>
+            <ul class="hotelslick">
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel1.jpg" alt="소테츠 그랜드 프레사 호텔 오사카점의 이미지">
+                        <section>
+                            <h3 class="ht5">소테츠 그랜드 프레사 오사카 - 난바</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.7<span class="eva">(509)</span></p>
+                                <p><span class="like"></span>8898</p>
+                                <p class="region">오사카</p>
+                            </div>
+                            <p class="price"><span>5%</span>81,491원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel2.jpg" alt="도미 인 프리미엄 남바 내추럴 핫 스프링 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">도미 인 프리미엄 남바 내추럴 핫 스프링</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.2 <span class="eva">(274)</span></p>
+                                <p><span class="like"></span>7956</p>
+                                <p class="region">오사카</p>
+                            </div>
+                            <p class="price"><span>5%</span>137,328원<span class="block p">트리플 클럽특가</span></p>
+                      </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel3.jpg" alt="칸데오 호텔스 오사카 호텔 남바점의 이미지">
+                        <section>
+                            <h3 class="ht5">칸데오 호텔스 오사카 남바</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.4 <span class="eva">(292)</span></p>
+                                <p><span class="like"></span>3704</p>
+                                <p class="region">오사카</p>
+                            </div>
+                            <p class="price"><span>5%</span>162,670원원<span class="block p">쿠폰할인가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel4.png" alt="커낼 시티 후쿠오카 워싱턴 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>  
+                        <section>
+                            <h3 class="ht5">커낼 시티 후쿠오카 워싱턴 호텔</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.5 <span class="eva">(339)</span></p>
+                                <p><span class="like"></span>6522</p>
+                                <p class="region">후쿠오카</p>
+                            </div>
+                            <p class="price"><span>5%</span>76,148원<span class="block p">트리플 클럽특가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel5.jpg" alt="오리엔탈 호텔 후쿠오카 하카타 스테이션의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">오리엔탈 호텔 후쿠오카 하카타 스테이션</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.7 <span class="eva">(43)</span></p>
+                                <p><span class="like"></span>1427</p>
+                                <p class="region">후쿠오카</p>
+                            </div>
+                            <p class="price"><span>5%</span>132,871원<span class="block p">트리플 클럽특가</span></p>
+                      </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel6.jpg" alt="호텔 WBF 그란데 하카타의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>  
+                        <section>
+                            <h3 class="ht5">호텔 WBF 그란데 하카타</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.3 <span class="eva">(109)</span></p>
+                                <p><span class="like"></span>1738</p>
+                                <p class="region">후쿠오카</p>
+                            </div>
+                            <p class="price">78,462원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel7.jpg" alt="신주쿠 워싱턴 호텔 메인의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">신주쿠 워싱턴 호텔 메인</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.5 <span class="eva">(184)</span></p>
+                                <p><span class="like"></span>5588</p>
+                                <p class="region">도쿄</p>
+                            </div>
+                            <p class="price"><span>5%</span>120,381원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel8.jpg" alt="렘 롯폰기 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">렘 롯폰기</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.3 <span class="eva">(509)</span></p>
+                                <p><span class="like"></span>3335</p>
+                                <p class="region">도쿄</p>
+                            </div>
+                            <p class="price"><span>5%</span>152,728원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel9.jpg" alt="도미 인 프리미엄 긴자 핫스프링스 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">도미 인 프리미엄 긴자 핫스프링스</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.9 <span class="eva">(12)</span></p>
+                                <p><span class="like"></span>28</p>
+                                <p class="region">도쿄</p>
+                            </div>
+                            <p class="price"><span>5%</span>242,213원<span class="block p">트리플 클럽특가</span></p>
+                      </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel10.jpg" alt="라겐트 스테이 삿포로 오도리 훗카이도 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">라겐트 스테이 삿포로 오도리 훗카이도</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.6 <span class="eva">(106)</span></p>
+                                <p><span class="like"></span>1838</p>
+                                <p class="region">삿포로</p>
+                            </div>
+                            <p class="price"><span>5%</span>144,640원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel11.jpg" alt="도미 인 프리미엄 삿포로 핫 스피링 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">도미 인 프리미엄 삿포로 핫 스피링</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.7 <span class="eva">(78)</span></p>
+                                <p><span class="like"></span>1263</p>
+                                <p class="region">삿포로</p>
+                            </div>
+                            <p class="price"><span>5%</span>156,554원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel12.png" alt="호텔 마하이나 웰니스 리조트 오키나와의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">호텔 마하이나 웰니스 리조트 오키나와</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.8 <span class="eva">(106)</span></p>
+                                <p><span class="like"></span>1682</p>
+                                <p class="region">오키나와</p>
+                            </div>
+                            <p class="price"><span>5%</span>89,558원<span class="block p">쿠폰 할인가</span></p>
+                        </section>
+                    </a>
+                </li>
+            </ul>
+            <a href="" class="more">더보기<span></span></a>
+        </div>
+    </section>
+    <section id="item">
+        <div class="wrap paddingT100 paddingB100">
+            <h2 class="h4">일본 필수템 최저가 모음</h2>
+            <ul class="itemslick">
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item1.png" alt="도쿄 지하철 패스 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[도쿄] 도쿄 지하철 패스 (24H · 48H · 72H)</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(241)</span><span class="like"></span>1582</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">20%</span>9,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item2.png" alt="오사카 주유패스 티켓 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[간사이] 오사카 주유패스 2일권</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.7 <span class="eva">(118)</span><span class="like"></span>2248</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">19%</span>32,000원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item3.png" alt="난카이 라피트 특급열차 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[오사카] 난카이 라피트 특급열차</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(321)</span><span class="like"></span>1982</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">20%</span>9,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item4.png" alt="JR - WEST 하루카 열차 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[간사이] JR - WEST 하루카 (간사이 공항 ↔ 교토 편도)</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(284)</span><span class="like"></span>845</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">19%</span>15,700원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item5.png" alt="한큐 투어리스트 패스 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[간사이] 한큐 투어리스트 패스 1일권/2일권</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(147)</span><span class="like"></span>962</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">19%</span>6,500원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item6.png" alt="간사이 리무진 버스 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[간사이] 간사이 리무진 버스</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.9 <span class="eva">(264)</span><span class="like"></span>468</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">18%</span>9,800원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item7.png" alt="오사카 간사이 쓰루패스 티켓 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[즉시확정] 오사카 간사이 쓰루패스 2일권/3일권</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.7 <span class="eva">(162)</span><span class="like"></span>524</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex">38,950원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item8.png" alt="교토의 로쿠온지 사찰의 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[여행 한 그릇] 일본 관서지방 오사카 출발 교토 버스 투어</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.1 <span class="eva">(84)</span><span class="like"></span>152</p>
+                                <p class="region">오사카<span class="item-type">투어/관광</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">15%</span>55,000원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item9.png" alt="소프트뱅크 eSIM 이미지 사진 ">
+                        <section>
+                            <h3 class="ht5">[eSIM]] 일본전국 커버 소프트뱅크 로컬망 데이터 매일 1기가/2기가</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.8 <span class="eva">(214)</span><span class="like"></span>1184</p>
+                                <p class="region">일본 전국<span class="item-type">와이파이/유심</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">14%</span>3,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item10.png" alt="SKT 포켓와이파이의 이미지 사진">
+                        <section>
+                            <h3 class="ht5">SKT 해외 포켓와이파이 무제한 데이터 로밍 일본</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.8 <span class="eva">(318)</span><span class="like"></span>1852</p>
+                                <p class="region">일본 전국<span class="item-type">와이파이/유심</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">16%</span>3,000원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item11.png" alt="유니버셜 스튜디오 재팬 포스터 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[오사카] 유니버셜 스튜디오 재팬 1일 입장권</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.7 <span class="eva">(694)</span><span class="like"></span>1138</p>
+                                <p class="region">오사카<span class="item-type">테마파크</span></p>
+                            </div>
+                            <p class="price">79,700원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item12.png" alt="유니버셜 스튜디오 재팬 입구정면 사진">
+                        <section>
+                            <h3 class="ht5">오사카 유니버셜 스튜디오 재팬 익스프레스 패스 4</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 3.7 <span class="eva">(152)</span><span class="like"></span>282</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex">9,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item13.png" alt="유니버셜 스튜디오 재팬 안에 있는 어트랙션 이미지 사진">
+                        <section>
+                            <h3 class="ht5">오사카 유니버셜 스튜디오 재팬 익스프레스 패스 7</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.0 <span class="eva">(208)</span><span class="like"></span>302</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">19%</span>174,100원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item14.png" alt="오사카 하루카스 300 전망대 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[즉시 확정] 하루카스 300 전망대 입장권</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.6 <span class="eva">(294)</span><span class="like"></span>502</p>
+                                <p class="region">오사카<span class="item-type">테마파크</span></p>
+                            </div>
+                            <p class="price flex">12,650원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item15.png" alt="오사카 팀랩 보태니컬 가든 이미지 사진">
+                        <section>
+                            <h3 class="ht5">오사카 팀랩 보태니컬 가든 입장권</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.7 <span class="eva">(194)</span><span class="like"></span>817</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">17%</span>4,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item16.png" alt="오사카 우메다 헵파이브 관람차 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[즉시 확정] 오사카 우메다 헵파이브 관람차 티켓</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.4 <span class="eva">(184)</span><span class="like"></span>863</p>
+                                <p class="region">오사카<span class="item-type">테마파크</span></p>
+                            </div>
+                            <p class="price flex">5,500원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item17.png" alt="소라니와 온천 베이타워 안에 있는 산책길 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[오사카] 소라니와 온천 오사카 베이타워</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.1 <span class="eva">(84)</span><span class="like"></span>152</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">18%</span>21,500원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item18.png" alt="우메다 스카이 빌딩 공중정원 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[오사카] 우메다 스카이 빌딩 공중정원</h3>
+                            <div class="pgroup flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(102)</span><span class="like"></span>960</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">18%</span>12,800원</p>
+                        </section>
+                    </a>
+                </li>
+                
+            </ul>
+            <a href="" class="more">더보기<span></span></a>
+        </div>
+    </section>
+    <section id="travel">
+        <div class="wrap paddingB100 paddingT100">
+            <h2 class="h4">트리플 인기 여행지</h2>
+            <ul>
+                <li>
+                    <a href="" class="travel-card1">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-dokyo-1.png" alt=""></div>
+                            <div class="con2"><img src="img/travel/tv-dokyo-2.png" alt=""></div>
+                            <div class="con3"><img src="img/travel/tv-dokyo-3.png" alt=""></div>
+                            <div class="con4"><img src="img/travel/tv-dokyo-4.png" alt=""></div>
+                            <div class="con5"><img src="img/travel/tv-dokyo-5.png" alt=""></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">🇯🇵 8월 말 4박 5일 도쿄여행 🇯🇵</h3>
+                            <p class="schedule p2">하늘님의 일정<span class="day">4박 5일</span></p>
+                            <p class="travel-ct p2">🗓 2023.08.21-2023.08.25
+                                <span class="block">✈ 인천>도쿄 : 07:55-10:20</span>
+                                ✈ 도쿄>인천 : 19:10-22:00
+                                    > 인당 항공권 30만원
+                                🏡 소테츠 프레사 인 니혼바시 닌교초 : 4박 5일 30만원. 방은 깔끔하지만 많이 작은 편이다. 침대를 제외한 빈 공간에 캐리어 두개 놓으면 꽉차는 정도!
+                                💴 환전 7만엔 + 숙소 30만원 + 교통비(스카이라이너, 도쿄매트로패스) 15만원 + 액티비티 및 기타(디즈니•전시회 등 바우처, 보험, e-sim) 50만원 + 각자 면세품 30만원 구매
+                                     > 인당 100만원
+                                🍽 motomura(규카츠/시부야, 신주쿠, 아키하바라, 니혼바시)
+                                🍽 tenkichiya(텐동/신주쿠/2시 L.O/신주쿠 노무라 빌딩 지하 2층)
+                                🍽 gyukaku(야키니쿠/니혼바시, 아키하바라, 신주쿠, 시부야)
+                                🍽 tamatoya(몬자야키/도쿄역, 긴자)
+                                🍽 kura-sushi(회전초밥/아사쿠사, 긴자, 시부야, 신주쿠, 아키하바라)
+                                🍽 menyamusashi(츠케멘/니혼바시, 시부야, 신주쿠, 아키하바라, 도쿄타워)
+                            </p>
+                            <figure>
+                                <img src="img/travel/tv-dokyo-6.png" alt="하늘의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="travel-card2">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-sapporo.png" alt="오사카 오도리 공원 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">폭염을 뚫고 간 여름 삿포로 3박 4일</h3>
+                            <p class="schedule p2">라마님의 일정<span class="day">3박 4일</span></p>
+                            <p class="travel-ct p2">#삿포로 #8월출발 #3박4일 #유명관광지는필수 #
+                                <span class="block">여행지느낌물씬 #관광보다먹방 #친구와</span>
+                            </p>
+                            <figure>
+                                <img src="img/travel/tv-sapporo-1.png" alt="라마의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="travel-card1">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-osaka-1.png" alt="오사카 글리코상의 정면 이미지 사진"></div>
+                            <div class="con2"><img src="img/travel/tv-osaka-2.png" alt="오사카 스카이빌딩에서의 문모모님 이미지 사진"></div>
+                            <div class="con3"><img src="img/travel/tv-osaka-3.png" alt="오사카 전철에서의 문모모님 이미지 사진"></div>
+                            <div class="con4"><img src="img/travel/tv-osaka-4.png" alt="문모모님의 기모노 이미지 사진"></div>
+                            <div class="con5"><img src="img/travel/tv-osaka-5.png" alt="공항에서의 문모모님 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">오사카&교토로 떠난 P(하욘, 수정)의 첫 자유여행</h3>
+                            <p class="schedule p2">문모모의 일정<span class="day">4박 5일</span></p>
+                            <p class="travel-ct p2">첫 자유여행이므로 우왕좌왕했지만 무사히 다녀왔다. 
+                                <span class="block">친한 친구와 함께라서 어떠한 고난(비행기 놓침)도 즐거웠다..</span></p>
+                            <figure>
+                                <img src="img/travel/tv-osaka-6.png" alt="문모모님의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="travel-card1">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-nagoya-1.png" alt="나고야 타워의 이미지 사진"></div>
+                            <div class="con2"><img src="img/travel/tv-nagoya-2.png" alt="나고야 온천에 발을 담근 이미지 사진"></div>
+                            <div class="con3"><img src="img/travel/tv-nagoya-3.png" alt="나고야 온천의 전경풍경을 담은 이미지 사진"></div>
+                            <div class="con4"><img src="img/travel/tv-nagoya-4.png" alt="나고야 온천에 발을 담근 이미지 사진"></div>
+                            <div class="con5"><img src="img/travel/tv-nagoya-5.png" alt="나고야 온천의 저녁식사 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">5박 6일 나고야 겨울여행!!</h3>
+                            <p class="schedule p2">민지님의 일정<span class="day">4박 5일</span></p>
+                            <p class="travel-ct p2">나고야는 다들 노잼도시라고 하지만,, 근교까지 보
+                                <span class="block">면 정말 할게 많은 도시에요!! 맛있는 음식도 도쿄보다 훨씬 많쿠요...!! </span></p>
+                            <figure>
+                                <img src="img/travel/tv-nagoya-6.png" alt="민지님의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="travel-card2">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-bail-1.png" alt="발리 바다의 전경풍경 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">친구들과의 행복한 일주일, 발리</h3>
+                            <p class="schedule p2">mica님의 일정<span class="day">6박 7일</span></p>
+                            <p class="travel-ct p2">모든걸 만끽하고픈 중년친구들의 일상을 떠난 행복
+                                <span class="block">한 여행. 서로 서로 끌어주고 밀어주면서 텐션 끌어오려 쏟아부은 발리 여행~
+                                    학창시절 수학여행을 간듯한 빼곡한 일정과 모두 즐기고픈 열정으로 가득 채워진 다시 가고픈 인생여행이었다!
+                                </span>
+                            </p>
+                            <figure>
+                                <img src="img/travel/tv-bail-2.png" alt="mica님의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="travel-card1">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-bangkok-1.png" alt="나고야 타워의 이미지 사진"></div>
+                            <div class="con2"><img src="img/travel/tv-bangkok-2.png" alt="나고야 온천에 발을 담근 이미지 사진"></div>
+                            <div class="con3"><img src="img/travel/tv-bangkok-3.png" alt="나고야 온천의 전경풍경을 담은 이미지 사진"></div>
+                            <div class="con4"><img src="img/travel/tv-bangkok-4.png" alt="나고야 온천에 발을 담근 이미지 사진"></div>
+                            <div class="con5"><img src="img/travel/tv-bangkok-5.png" alt="나고야 온천의 저녁식사 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">5박 6일 나고야 겨울여행!!</h3>
+                            <p class="schedule p2">jiihyunnn님의 일정<span class="day">4박 5일</span></p>
+                            <p class="travel-ct p2">나고야는 다들 노잼도시라고 하지만,, 근교까지 보
+                                <span class="block">면 정말 할게 많은 도시에요!! 맛있는 음식도 도쿄보다 훨씬 많쿠요...!! </span></p>
+                            <figure>
+                                <img src="img/travel/tv-bangkok-6.png" alt="jiihyunnn님의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a href="" class="more">더보기<span></span></a>
+        </div>
+    </section>
+    <div id="footer">
+        <div class="wrap paddingT100 paddingB100 flex">
+            <div class="fb1 flex flex-column">
+                <ul>
+                    <li><a href="">서비스 이용약관</a><a href="">개인정보 처리방침</a><a href="">고객센터</a></li>
+                    <p class="fb-name">(주)인터파크트리플 <span>대표 : 최휘영</span></p>
+                    <p class="fb-number">사업자 등록번호 : 824-81-02515<span>통신판매업 신고번호 2022-서울강남-02179</span></p>
+                    <address>주소 : 서울특별시 강남구 삼성로 512 삼성동빌딩 10층 <span>이메일 : help@triple-corp.com</span></address>
+                    <p>㈜인터파크트리플은 통신판매중개로서 통신판매의 당사자가 아니며 <span class="block"> 상품 거래정보 및 거래등에 대해 책임을 지지 않습니다.</span></p>
+                </ul>
+            </div>
+            <div class="fb2">
+                <ul>
+                    <li>
+                        <h2>카카오톡</h2>
+                        <h3><a href="">@트리플서비스</a></h3>
+                    </li>
+                    <li>
+                        <h3>국내</h3>
+                        <p><a href="">1588-2539</a></p>
+                    </li>
+                    <li>
+                        <h3>해외에서</h3>
+                        <p><a href="">(+82)2-1588-2539</a></p>
+                    </li>
+                    <li>
+                        <p>오전 9시 - 오후 6시 (한국시간 기준, 연중무휴)<span class="block">단, 항공문의는 주말/공휴일 제외</span></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="fb3 flex flex-column">
+                <div class="fb3a">
+                    <a href="" class="link-go">로그인</a>
+                    <a href="" class="link-go">트리플 앱<span></span></a>
+                </div>
+                <div class="fb3c">
+                    <img src="img/ISMS.png" alt="정보보호 관리체계 인증 로고 이미지">
+                    <img src="img/ISMS-P.png" alt="정보보호 및 개인정보보호 관리체계 인증 로고 이미지">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

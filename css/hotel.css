@@ -1,0 +1,159 @@
+#hotel {
+  
+}
+#hotel .wrap {
+  
+  position: relative;
+}
+#hotel .wrap h2 {
+}
+#hotel .wrap ul {
+  
+}
+#hotel .wrap ul .slick-dots{
+  bottom: -50px;
+}
+#hotel .wrap ul .hotellist {  
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+#hotel .wrap ul li a {  
+  width: auto;
+  display: block;
+  position: relative;
+}
+#hotel .wrap ul li a img {
+  width: 370px;
+  border-radius: 10px;
+  height: 250px;
+  background-repeat: no-repeat;
+}
+#hotel .wrap ul li a .badgebox{
+
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 14px;
+}
+#hotel .wrap ul li a .badge-single{
+  background: #368fff;
+  color: white;
+  padding: 6px 18px;
+}
+#hotel .wrap ul li a .badge-best{  
+  background: #0bd0af;
+  color: white;
+  padding: 6px 7px;
+}
+#hotel .wrap ul li a section {
+  
+}
+#hotel .wrap ul li a section p.price{
+  
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-top: 10px;
+}
+#hotel .wrap ul li a section p.price >span{
+  
+}
+#hotel .wrap ul li a section p.price span:nth-child(1){
+  
+  color: red;
+  margin-right: 10px;
+  font-weight: 600;
+}
+#hotel .wrap ul li a section p.price >.block{
+  
+  font-weight: 500;
+}
+#hotel .wrap ul li a section h3 {  
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 10px;
+
+}
+#hotel .wrap ul li a section div.pgroup {
+  
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  gap: 10px;
+}
+#hotel .wrap ul li a section div.pgroup > p {
+  display: flex;
+  align-items: center;
+}
+#hotel .wrap ul li a section div.pgroup > p .rating{
+  background-image: url(../img/rating.svg);
+  width: 19px;
+  height: 19px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 3px;
+}
+#hotel .wrap ul li a section div.pgroup > p .like{
+  background-image: url(../img/like.svg);
+  width: 16px;
+  height: 15px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 2px;
+}
+#hotel .wrap ul li a section div.pgroup > p .eva{ 
+  color: gray;
+}
+#hotel .wrap ul li a section div.pgroup .region{
+  color:gray;
+}
+#hotel .wrap ul li a section div.pgroup .region::before {
+    content: "\2022";
+    margin-right: 8px; 
+  }
+#hotel .wrap ul li a section p span span.blcok {
+  
+}
+#hotel .wrap a.more {
+  
+  position: absolute;
+  top: 104px;
+  right: 15px;
+}
+#hotel .wrap a.more span{
+  
+  background-image: url(../img/arrowR.svg);
+  width: 28px;
+  height: 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* 호텔 슬릭 */
+#hotel .wrap .slick-next{
+  right: -15px;
+}
+#hotel .wrap .slick-prev{
+  left: -15px;
+}
+#hotel .wrap .slick-next, #hotel .wrap .slick-prev{
+  top: 35%;
+  opacity: 1;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+#hotel .slick-prev:hover::before, 
+#hotel .slick-prev:focus::before, 
+#hotel .slick-next:hover::before, 
+#hotel .slick-next:focus::before{
+  
+}
+#hotel .wrap .slick-next:hover, #hotel .wrap .slick-prev:hover{
+ 
+  opacity: .75;
+}

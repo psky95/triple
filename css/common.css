@@ -1,0 +1,153 @@
+/* 공통스타일 class */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+body{
+  font-family: 'Pretendard', sans-serif;
+}
+.width-full{
+  width: auto;
+}
+.heith-full{
+  height: 100%
+}
+html{
+  height: 100%;
+  font-size: 100%
+}
+.wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.wrap2{
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.hide{
+  display: none; /* 안보이게 */
+}
+.rbox{
+  width: 300px;
+  height: 300px;
+  background-color: #eee;
+  border-radius: 20px;
+  text-align: center;
+}
+.bgimg{
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position-x: 90%;
+  background-position-y: 10%;
+}
+.padding50{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.paddingB50{
+  padding-bottom: 50px;
+}
+.paddingB100{
+  padding-bottom: 100px;
+}
+.paddingT50{
+  padding-top: 50px;
+}
+.paddingT100{
+  padding-top: 100px;
+}
+.marginB50{
+  margin-bottom: 50px;
+}
+.marginB100{
+  margin-bottom: 100px;
+}
+.marginT50{
+  margin-top: 50px;
+}
+.marginT100{
+  margin-top: 100px;
+}
+.flex{
+  display: flex;
+}
+.flex-center{
+  justify-content: center
+}
+.flex-between{
+  justify-content:space-between 
+}
+.flex-align-center{
+  align-items: center
+}
+.flex-column{
+  flex-direction: column;
+}
+.text-center{
+  text-align: center;
+}
+.h1{
+  font-size: 120px; 
+}
+.h2{
+  font-size: 60px;
+}
+.h3{
+  font-size: 48px;
+}
+.h4{
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.ht5{
+  font-size: 22px;
+}
+.h5{
+  font-size: 20px;
+}
+.h6{
+  font-size: 18px; 
+}
+.p{
+  font-size: 16px;  
+}
+.p2{
+  font-size: 15px;  
+}
+.block{
+  display: block;
+}
+.button{
+width: 35px;
+height: 35px;
+border-radius: 50%;
+border: none;
+box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+font-size: 0;
+}
+.more{ 
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e2e2;
+  border-radius: 25px;
+  width: 75px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  font-size: 16px;
+  padding-left: 15px;
+}
+.moreall{
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  height: 30px;
+  width: 90px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 14px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
+  padding-left: 10px;
+}
+.spshow{
+  display: block;
+}

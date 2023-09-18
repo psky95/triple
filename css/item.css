@@ -1,0 +1,134 @@
+#item { 
+  background-color: #f5f5f5;
+}
+#item .wrap {
+  
+  position: relative;
+}
+#item .wrap h2 {
+  
+}
+#item .wrap ul.itemslick {
+  
+}
+#item .wrap ul.itemslick .itemlist {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+#item .wrap ul.itemslick .itemlist a {
+  
+}
+#item .wrap ul.itemslick .itemlist a img {
+  
+  width: 370px;
+  height: 250px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+}
+#item .wrap ul.itemslick .itemlist a section {
+  width: 370px;
+}
+#item .wrap ul.itemslick .itemlist a section h3 {
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#item .wrap ul.itemslick .itemlist a section .pgroup {
+  
+  gap: 10px;
+  align-items: center;
+  font-weight: 300;
+}
+#item .wrap ul.itemslick .itemlist a section .pgroup .region {
+  
+}
+#item .wrap ul.itemslick .itemlist a section .pgroup .region::before{
+  content: "\2022";
+  margin-right: 8px;
+}
+
+#item .wrap ul.itemslick .itemlist a section .pgroup .region > span {
+  
+}
+#item .wrap ul.itemslick .itemlist a section .pgroup .rating-box {
+
+  display: flex;
+  align-items: center;
+}
+#item .wrap ul.itemslick .itemlist a section .pgroup .rating-box .rating {
+  background-image: url(../img/rating.svg);
+  width: 19px;
+  height: 19px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 3px;
+}
+#item .wrap ul.itemslick .itemlist a section .pgroup .rating-box .eva {
+  color: gray;
+}
+#item .wrap ul.itemslick .itemlist a section .pgroup .rating-box .like{
+  background-image: url(../img/like.svg);
+  width: 16px;
+  height: 15px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 2px;
+  margin-left: 10px;
+}
+#item .wrap ul.itemslick .itemlist a section .price {
+  
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 700;
+  align-items: center;
+  margin-top: 10px;
+}
+#item .wrap ul.itemslick .itemlist a section .price .dc {
+  
+  color: red;
+  margin-right: 10px;
+  font-weight: 600;
+}
+#item .wrap a.more {
+  
+  position: absolute;
+  top: 104px;
+  right: 15px;
+}
+#item .wrap a.more span{
+  
+  background-image: url(../img/arrowR.svg);
+  width: 28px;
+  height: 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#item .wrap a.more span::before{
+  
+}
+
+/* 아이템css 슬릭 스타일 */
+
+#item .wrap .slick-prev{
+  
+  left: -15px;
+}
+#item .wrap .slick-prev,
+#item .wrap .slick-next{
+  
+  top: 35%;
+}
+#item .wrap .slick-next{
+  
+  right: -15px;
+}
+#item .wrap .slick-dots{ 
+  bottom: -50px;
+}

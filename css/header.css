@@ -1,0 +1,154 @@
+#header {
+  
+  background-color: white;
+}
+#header .head {
+  
+}
+#header .head div.flex {
+  
+  padding-top: 20px;
+}
+#header .head div.flex h1 {
+  
+  display: flex;
+}
+#header .head div.flex h1 > a{
+  
+  font-weight: 600;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+}
+#header .head div.flex h1 > .h2::after{
+  content:"";
+  background-image: url(../img/titlelogo.png);
+  width: 36px;
+  height: 36px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+#header .head .flex a{
+  color:black;
+}
+#header .head div.flex h1 form{
+  
+  margin-left: 100px;
+}
+#header .head div.flex h1 input{
+  background-color: rgb(241, 243, 245);
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid #eee;
+  width: 250px;
+  height: 15px;
+  font-size: 16px;
+}
+.searchwrap {
+    position: relative;
+}
+
+.search-icon {
+    content: "";
+    background-image: url(../img/search.png);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#header .head div.flex h1 input:focus {
+    outline: none; 
+}
+
+#header .head div.flex > ul{ 
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  gap: 25px;
+}
+  
+#header .head div.flex > ul li {
+  
+}
+#header .head div.flex > ul li a { 
+  padding: 7.5px 7.5px;
+/*   transition: all 0.7s; */
+}
+#header .head div.flex > ul li a:hover{
+  background-color:#eee;
+}
+#header .head div.hmenu {
+  
+  padding: 20px 0;
+}
+#header .head div.hmenu > ul {
+  
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+#header .head div.hmenu > ul li {
+  
+}
+#header .head div.hmenu > ul li a {
+
+  padding: 15px 15px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+#header .head div.hmenu > ul li a::before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#header .head div.hmenu > ul li:nth-child(1) a::before{
+  
+  background-image: url(../img/t1.svg);
+}
+#header .head div.hmenu > ul li:nth-child(2) a::before{
+  background-image: url(../img/t2.svg);
+}
+#header .head div.hmenu > ul li:nth-child(3) a::before{
+  background-image: url(../img/t3.svg);
+}
+#header .head div.hmenu > ul li:nth-child(4) a::before{
+  background-image: url(../img/t4.svg);
+  margin: 0;
+}
+#header .head div.hmenu > ul li:nth-child(5) a::before{
+  background-image: url(../img/t5.png);
+}
+#header .head div.hmenu > ul li:nth-child(6) a::before{
+  background-image: url(../img/t6.png);
+}
+#header .head div.hmenu > ul li:nth-child(7) a::before{
+  background-image: url(../img/t7.png);
+}
+#header .head div.hmenu > ul li:nth-child(8) a::before{
+  background-image: url(../img/t8.png);
+}
+#header .head div.hmenu > ul li a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.7s;
+  width: 0%;
+  height: 7%;
+  background-color: #0bd0af;
+}
+#header .head div.hmenu > ul li a:hover::after{
+  width: 100%;
+}
