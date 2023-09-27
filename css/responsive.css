@@ -1,0 +1,347 @@
+@media screen and (max-width:1140px){
+  html, body {
+        overflow-x: hidden;
+  }
+  #overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: all 1s;
+  }
+  #overlay.active {
+    display: block;
+    opacity: 1;
+  }
+  .h3{
+    font-size: 1.75rem;
+  }
+  .h4{
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .h6{
+    font-size: 1rem;
+  }
+  .p{
+    font-size: 0.8125rem;
+  }
+  .paddingT50{
+    padding-top: 20px;
+  }
+  .paddingT100{   
+    padding-top: 50px;
+  }
+  .paddingB100 {
+  padding-bottom: 100px;
+}
+  .marginB50{
+    margin-bottom: 30px;
+  }
+  .wrap{   
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .more{
+    
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+  padding: 0px;
+  }
+  .wrap a.more span{
+    
+  display: none;
+  }
+  /* 헤더 영역   */
+  #header .head{
+    padding: 0 10px;
+  }
+  #hotple .wrap{
+    
+  padding-top: 25px;
+  padding-bottom: 25px;
+  }
+  #header .head div.flex h1 > a{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+  #header .head div.flex h1 > .h2::after{
+    display: none;
+  }
+  #header .head div.hmenu > ul{
+    border:none;
+  }
+  #header .head div.hmenu > ul li a::after{
+    display: none;
+  }
+  #header .head div.flex h1 form{
+    display: none;
+  }
+  #header .head div.hmenu{
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  #header .head div.hmenu > ul li:nth-child(n+5){
+    display: none;
+  }
+  #header .head div.flex > ul{ 
+    gap: 15px;
+  }
+  #header .head div.hmenu > ul li a{
+    padding: 15px 10px 15px 10px;
+  }
+  #header .head div.flex > ul li:not(.main-nav >ul li, .footer-nav >ul li){
+    display: none;
+  }
+  .plus{
+    display: block;
+    background-image: url(../img/re_search.svg);
+    background-size: cover;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+  }
+  .toggle-menu{
+    
+  }
+  /* 타이틀 영역 */
+  #title{
+
+  }
+  #title div.twrap{ 
+    padding: 0;
+  }
+  #title div.twrap ul .tbox { 
+    border-radius: 0; 
+    height: 75.44vw;
+    height: 400px;
+  }
+  #title div.twrap ul .tbox > div{  
+    padding-left: 2.4rem;
+    transform: translateY(-55px);
+  }
+  #title div.twrap ul li p{ 
+    font-size: 0.875rem;
+    margin-left: 0;
+  }
+  #title div.twrap ul li .more{  
+    width: 90px;
+    font-size: 0.775rem;
+    height: 30px;
+    font-weight: 500;
+    opacity: 1;
+    border-radius: 25px;
+  }
+  /* 인기 도시 */
+  #hotple{
+    background: #fff;
+  }
+  #hotple .wrap ul li a{  
+    width: 105px;
+    height: 105px;
+  }
+  #hotple .wrap ul li a .hovergroupbox .hovergroup{   
+    display: flex;
+  }
+  #hotple .wrap ul li a .hovergroup h3{
+    
+  font-size: 14px;
+  font-weight: 390;
+  }
+  #hotple .wrap ul li a .hovergroup p{  
+    display: none;
+  }
+  #hotple .wrap ul li a .hovergroupbox:hover{
+    
+  }
+  #hotple .wrap ul li a .hovergroupbox:hover .hovergroup{  
+    background-color: transparent;
+  }
+  #hotple .wrap ul li a .hovergroupbox {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+  }
+  #hotple .wrap ul li h4{  
+    width: 100px;
+    line-height: 1.4;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #hotple .wrap ul .slick-dots{
+    
+  bottom: -25px;
+  transform: scale(85%);
+  }
+  /* 인기 호텔 */
+  #hotel .wrap ul .hotellist{
+    
+  align-items: flex-start;
+  }
+  #hotel .wrap ul li a{
+    
+  }
+  #hotel .wrap ul li a img{
+     
+  width: 385px;
+  height: 235px;
+  }
+  #hotel .wrap ul li a section .ht5{
+  width: 99%;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  #hotel .hotellist:nth-child(1) .ht5,
+  #hotel .hotellist:nth-child(2) .ht5,
+  #hotel .hotellist:nth-child(5) .ht5,
+  #hotel .hotellist:nth-child(10) .ht5,
+  #hotel .hotellist:nth-child(12) .ht5 {
+  }
+  #hotel .wrap ul li a section div.pgroup{ 
+  gap: 5px;
+  font-size: 0.9125rem;
+  }
+  #hotel .wrap ul li a section div.pgroup .region::before {
+  content: "\2022";
+  margin-right: 4px;
+  }
+  #hotel .wrap ul li a section p.price{
+    
+  margin-top: 5px;
+  font-size: 1.3rem;
+  }
+  #hotel .wrap ul li a section p.price span:nth-child(1){
+    
+  margin-right: 5px;
+  }
+  #hotel .wrap ul li a .badgebox{
+    
+  left: 15px;
+  font-size: 0.75rem;
+  top: 10px;
+  
+  }
+  #hotel .wrap ul .slick-dots{
+    
+  bottom: -45px;
+  transform: scale(85%);
+  }
+  #hotel .slick-list{
+  overflow: initial;
+  }
+  #hotel .slick-list .slick-slide{
+  width: 415px;
+  }
+  #hotel .wrap a.more{
+    top: 480px;
+    right: 79px;
+  }
+  /*  일본 필수템  */
+  #item .wrap ul.itemslick .itemlist a img{
+    width: 385px;
+    height: 235px;
+  }
+  #item .wrap ul.itemslick .itemlist{
+    
+  align-items: flex-start;
+  }
+  #item .slick-list{
+    
+  overflow: initial;
+  }
+  #item .wrap ul.itemslick .itemlist a section h3{ 
+  width: 100%;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  #item .wrap ul.itemslick .itemlist a section .pgroup{
+    
+  font-size: 0.9125rem;
+  }
+  #item .wrap ul.itemslick .itemlist a section .pgroup .region::before{
+    
+  margin-right: 4px;
+  }
+  #item .wrap ul.itemslick .itemlist a section .price{
+    
+  margin-top: 5px;
+  font-size: 1.3rem;
+  }
+  #item .wrap a.more{
+    
+  top: 465px;
+  right: 79px;
+  }
+  #item .wrap ul.itemslick .itemlist a section .pgroup .region{
+    color:gray;
+  }
+  /* 트리플 인기 여행지 */
+  #travel .wrap h2{
+    margin-left: 22.5px;
+  }
+  #travel .wrap .more{
+    
+  bottom: 20px;
+  top: initial;
+  left: 79px;
+  }
+  /* 하단 영역 */
+  #footer{
+    background: #fff;
+  }
+  #footer .wrap{
+    
+  padding-bottom: 50px;
+  }
+  #footer .wrap .fb1{
+    
+  width: 100%;
+  }
+  #footer .wrap .fb1 ul{
+    
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  }
+  #footer .wrap .fb1 ul li{
+    
+  padding: 0;
+  order: 5;
+  padding-top: 10px;
+  }
+  #footer .wrap .fb1 ul p.fb-name{
+    
+  }
+  #footer .wrap .fb2{
+    display: none;
+  }
+  #footer .wrap .fb3{
+    display: none;
+  }
+  #footer .wrap .fb1 ul p.fb-number{
+    
+  padding: 10px 0;
+  }
+  #footer .wrap .fb1 ul address{
+    
+  padding-bottom: 10px;
+  }
+  #footer .wrap .fb1 ul p{
+    
+  font-size: 0.8rem;
+  }
+  #footer .wrap .fb1 ul li > a{
+    color:black;
+  }
+}

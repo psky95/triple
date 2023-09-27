@@ -78,11 +78,11 @@
 #header .head div.flex > ul li {
   
 }
-#header .head div.flex > ul li a { 
+#header .head div.flex > ul li a:not(#menu a) { 
   padding: 7.5px 7.5px;
 /*   transition: all 0.7s; */
 }
-#header .head div.flex > ul li a:hover{
+#header .head div.flex > ul li a:hover:not(#menu a){
   background-color:#eee;
 }
 #header .head div.hmenu {

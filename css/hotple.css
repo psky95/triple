@@ -23,6 +23,10 @@
   display: block;
   border-radius: 50%;
 }
+#hotple .wrap ul li a:nth-child(8){
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 #hotple .wrap ul li a:hover{
   
 }
@@ -40,28 +44,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-#hotple .wrap ul li a .hoverbox .hotple1{
-  background-image: url(../img/hp1.png);
-}
-#hotple .wrap ul li a .hoverbox .hotple2{
-  background-image: url(../img/hp2.png);
-}
-#hotple .wrap ul li a .hoverbox .hotple3{
-  background-image: url(../img/hp3.png);
-  background-position: bottom;
-}
-#hotple .wrap ul li a .hoverbox .hotple4{
-  background-image: url(../img/hp4.png);
-}
+#hotple .wrap ul li a .hoverbox .hotple3,
 #hotple .wrap ul li a .hoverbox .hotple5{
-  background-image: url(../img/hp5.png);
   background-position: bottom;
-}
-#hotple .wrap ul li a .hoverbox .hotple6{
-  background-image: url(../img/hp6.png);
-}
-#hotple .wrap ul li a .hoverbox .hotple7{
-  background-image: url(../img/hp7.png);
 }
 #hotple .wrap ul li a .hoverbox .hotple8{
   height: 100%;
@@ -77,15 +62,6 @@
   top: 0;
   height: 100%;
   width: 100%;
-}
-#hotple .wrap ul li a .hovergroupbox:hover{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0,0,0,0.5);
-  border: 1px solid transparent;
-  border-radius: 50%;
 }
 #hotple .wrap ul li a .nothovergroupbox{
   display: flex;
@@ -103,7 +79,6 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(0,0,0,0.5);
-  border: 1px solid transparent;
   border-radius: 50%;
 }
 #hotple .wrap ul li a .hovergroupbox .hovergroup{
@@ -115,7 +90,6 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid transparent;
   border-radius: 50%;
   position: absolute;
   top: 0;

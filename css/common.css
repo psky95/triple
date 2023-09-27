@@ -22,7 +22,7 @@ html{
   margin: 0 auto;
 }
 .hide{
-  display: none; /* 안보이게 */
+  display: none;
 }
 .rbox{
   width: 300px;
@@ -148,6 +148,15 @@ font-size: 0;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
   padding-left: 10px;
 }
-.spshow{
-  display: block;
+.plus{
+  font-size: 0;
+  width: 33px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  color: black;
+  display: none;
+}
+.plus::before{
+  content: "";
 }
