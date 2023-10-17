@@ -10,8 +10,7 @@
 #hotple .wrap ul li {
   
 }
-#hotple .wrap ul .hpflex{
-  
+#hotple .wrap ul .hpflex{ 
   display: flex !important;
   flex-direction: column;
   align-items: center;

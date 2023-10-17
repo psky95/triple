@@ -19,6 +19,10 @@
   display: flex;
   padding-bottom: 20px;
 }
+#footer .wrap .fb1 ul li:nth-child(2){
+  
+  flex-direction: column;
+}
 #footer .wrap .fb1 ul li > a {
   
   color: rgb(102, 109, 117);

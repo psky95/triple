@@ -8,6 +8,7 @@
 #header .head div.flex {
   
   padding-top: 20px;
+  position: relative;
 }
 #header .head div.flex h1 {
   
@@ -34,11 +35,14 @@
 #header .head .flex a{
   color:black;
 }
-#header .head div.flex h1 form{
+#header .head div.flex form{
   
   margin-left: 100px;
+  position: absolute;
+  top: 20px;
+  left: 165px;
 }
-#header .head div.flex h1 input{
+#header .head div.flex input{
   background-color: rgb(241, 243, 245);
   padding: 15px 10px;
   border-radius: 10px;
