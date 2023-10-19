@@ -351,4 +351,7 @@
   #footer .wrap .fb1 ul li > a{
     color:black;
   }
+  #footer .btop{
+    display: none;
+  }
 }
