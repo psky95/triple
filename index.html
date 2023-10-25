@@ -1,566 +1,1068 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://psky95.github.io/pasky95_Pf_Site/">
-    <meta property="og:description" content="대한민국의 웹 퍼블리셔 Park Haneul이(가) 제작한 개인 포트폴리오 웹 홈페이지">
-    <meta property="og:keywords" content="포트폴리오,웹퍼블리싱,웹퍼블리셔,개인 포트폴리오">
-    <meta property="og:title" content="Park Haneul의 개인 포트폴리오 웹 사이트">
-    <meta name="description" content="대한민국의 웹 퍼블리셔 Park Haneul이(가) 제작한 개인 포트폴리오 웹 홈페이지">
-    <meta name="keywords" content="포트폴리오,웹퍼블리싱,웹퍼블리셔,개인 포트폴리오">
-    <title>SKY</title>
+    <meta property="og:url" content="https://psky95.github.io/triple/">
+    <meta property="og:description" content="국내 최대 여행사 트리플 홈페이지">
+    <meta property="og:keywords" content="여행,국내여행,해외여행,패키지 여행,항공권,호텔예약">
+    <meta property="og:title" content="여행의 즐거움! 트리플">
+    <meta name="og:image" content="https://example.com/images/myimage.jpg">
+    <meta property="og:image" content="img/titlelogo.png">
+    <meta name="description" content="국내 최대 여행사 트리플 홈페이지">
+    <meta name="keywords" content="여행,국내여행,해외여행,패키지 여행,항공권,호텔예약">
+    <title>트리플</title>
+
+    <!-- 프리텐다드 폰트적용 -->
+    <link rel="preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/skill.css">
-    <link rel="stylesheet" href="css/portfolio.css">
-    <link rel="stylesheet" href="css/titlemovie.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/hotple.css">
+    <link rel="stylesheet" href="css/hotel.css">
+    <link rel="stylesheet" href="css/item.css">
+    <link rel="stylesheet" href="css/travel.css">
     <link rel="stylesheet" href="css/footer.css">
-     <!-- 프리텐다드 글꼴 -->
-    <link rel="stylesheet preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
-    <!-- 햄버거 & 애니메이트 css (반응형) -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.css'>
-    <link rel="stylesheet" href="css/hamburger.css">
-    <!-- partial햄버거 -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script  src="hamburger/script.js"> </script>
-    <!-- 사이드 네비 -->
-    <link rel="stylesheet" href="css/sidenav.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script  src="sidenav/script.js"></script>
+    <link rel="stylesheet" href="css/responsive.css">
+
     <!-- 제이쿼리 연결 -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script>
-    </script> 
+    <script></script>
+
+    <!-- 햄버거와 애니메이트 css -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.css'>
+    <link rel="stylesheet" href="css/hamburger.css">
+ 
+    <!-- partial햄버거 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="hamburger/script.js"> </script>
+
     <!-- 슬릭 -->
-    <link rel="stylesheet" href="css/slick.css">
-    <script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script><script  src="slick/script.js"></script>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="slick/style.css">
-    <!-- 스크롤 휠 -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <script src="slick/slick.js"></script>
     <script>
-        window.onload = function () {
-            var elm = ".box";
-            $("section").unwrap();
-            $(elm).each(function (index) {
-                // 개별적으로 Wheel 이벤트 적용
-                $(this).on("mousewheel DOMMouseScroll", function (e) {
-                    e.preventDefault();
-                    var delta = 0;
-                    if (!event) event = window.event;
-                    if (event.wheelDelta) {
-                        delta = event.wheelDelta / 120;
-                        if (window.opera) delta = -delta;
-                    } 
-                    else if (event.detail)
-                        delta = -event.detail / 3;
-                    var moveTop = $(window).scrollTop();
-                    var elmSelecter = $(elm).eq(index);
-                    // 마우스휠 위에서 아래로
-                    if (delta < 0) {
-                        if ($(elmSelecter).next() != undefined) {
-                            try{
-                                moveTop = $(elmSelecter).next().offset().top;
-                            }catch(e){}
-                        }
-                    // 마우스휠 아래에서 위로
-                    } else {
-                        if ($(elmSelecter).prev() != undefined) {
-                            try{
-                                moveTop = $(elmSelecter).prev().offset().top;
-                            }catch(e){}
-                        }
-                    }
-                    // 화면 이동 0.7초
-                    $("html,body").stop().animate({
-                        scrollTop: moveTop + 'px'
-                    }, {
-                        duration: 700, complete: function () {
-                        }
-                    });
-                });
+        $(document).ready(function(){
+            const toggleMenuButton = document.querySelector('.toggle-menu');
+            const overlay = document.getElementById('overlay');
+            toggleMenuButton.addEventListener('click', () => {
+                const menu = document.getElementById('menu');
+                overlay.classList.toggle('active');
             });
-        }
+            // 타이틀 슬릭 애니메이션
+            $('.titleslick').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                fade: true,
+                speed: 1000,
+                responsive: [{
+                    breakpoint: 461,
+                    settings: {
+                    arrows: false,
+                    fade: false,
+                    autoplay: false,
+                    swipe: true
+                    }
+                }]
+            });
+            // 핫플 슬릭 애니메이션
+            $('.hotpleslick').slick({
+                autoplay: true,
+                autoplaySpeed: 3500,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                speed: 1500,
+                responsive: [{
+                    breakpoint: 461,
+                    settings: {
+                    arrows: false,
+                    autoplay: false,
+                    swipe: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                    }
+                }]
+            });
+            // 일본 인기호텔 영역 슬릭
+            $('.hotelslick').slick({
+                autoplay: true,
+                autoplaySpeed: 3500,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                speed: 1000,
+                responsive: [{
+                    breakpoint: 461,
+                    settings: {
+                    arrows: false,
+                    autoplay: false,
+                    dots: false,
+                    swipe: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: false
+                    }
+                }]
+            });
+            // 필수템 최저가 영역 슬릭
+            $('.itemslick').slick({
+                autoplay: true,
+                autoplaySpeed: 3500,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                speed: 1000,
+                responsive: [{
+                    breakpoint: 461,
+                    settings: {
+                    arrows: false,
+                    autoplay: false,
+                    dots: false,
+                    swipe: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: false
+                    }
+                }]
+            });
+            // 사이드 버튼
+            function scrollToTop() {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            }
+            $("#scrollToTopButton").on("click", scrollToTop);
+        });
     </script>
 </head>
 <body>
-    <!-- 상단영역 -->
-    <header>
-        <div class="wrap">
-            <h1><a href="">Park Haneul</a></h1>
-            <ul class="gnb">
-                <li>
-                    <a class="logohover" onclick="window.open('https://github.com/psky95/psky95','_blank');event.preventDefault();">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        width="30px" height="30px" viewBox="0 0 550.801 550.801" style="enable-background:new 0 0 550.801 550.801;"
-                        xml:space="preserve">
-                        <g><g id="drive"><path d="M538.051,339.15L362.1,33.15H188.7l0,0l175.951,306H538.051z M216.75,364.65l-86.7,153H464.1l86.701-153H216.75z
-                            M165.75,71.4L0,364.65l86.7,153L255,224.4L165.75,71.4z"/></g></g>
-                        </svg>
+    <div id="overlay"></div>
+    <section id="header">
+        <div class="head wrap">
+            <div class="flex flex-between">
+                <h1>
+                    <a class="h2" href="">TRIPLE</a>
+                </h1>
+                <form class="more" action="https://triple.guide/login?returnUrl=%2Fmy-bookings%2F&type=bookings">
+                    <div class="searchwrap">
+                        <input class="search" type="text" name="q" placeholder="어디로 떠나시나요?">
+                        <button><span class="search-icon"></span></button>
+                    </div>
+                </form>
+                <ul>
+                    <li><a class="h6" href="">로그인</a></li>
+                    <li><a class="h6" href="">내 예약</a></li>
+                    <li class="search_box"><a href="" class="plus">검색하기</a></li>
+                </ul>
+                <div id="menu" class="">
+                    <div class="menu-head">
+                        <a href="">알림</a>
+                        <a href="">환경설정</a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul>
+                            <li id="user-box">
+                                <ul class="my-box">
+                                    <li><h2 class="h5">고객님</h2></li>
+                                    <li>
+                                        <a href=""><p class="p2">내 여행<span>29</span></p></a>
+                                        <a href=""><p class="p2">리뷰<span>12</span></p></a>
+                                        <a href=""><p class="p2">여행기<span>10</span></p></a>
+                                    </li>
+                                    <li>
+                                        <img src="img/user.png" alt="하늘의 프로필 이미지 사진">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="user-menu">
+                                <a href="">
+                                    <h3 class="h5">내 저장</h3>
+                                    <p class="p">9<span></span></p>
+                                </a>
+                            </li>
+                            <li class="user-menu">
+                                <a href="">
+                                    <h3 class="h5">내 예약</h3>
+                                    <p class="p"><span></span></p>
+                                </a>
+                            </li>
+                            <li class="user-menu">
+                                <a href="">
+                                    <h3 class="h5">쿠폰함</h3>
+                                    <p class="p">11개<span></span></p>
+                                </a>
+                            </li>
+                            <li class="user-menu">
+                                <a href="">
+                                    <h3 class="h5">트리플 캐시</h3>
+                                    <p class="p">7,722원<span></span></p>
+                                </a>
+                            </li>
+                            <li class="user-menu">
+                                <a href="">
+                                    <h3 class="h5">여행자 클럽</h3>
+                                    <p class="p">LEVEL 2<span class="level-point">43P</span><span></span></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <footer class="menu-footer">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li>
+                                    <a href="#" class="">
+                                        <h3>공지사항</h3>
+                                        <img src="img/notice.svg" alt="notice">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        <h3>오프라인<br>가이드</h3>
+                                        <img src="img/guide.svg" alt="guide">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        <h3>일행초대</h3>
+                                        <img src="img/join.svg" alt="join">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        <h3>고객센터</h3>
+                                        <img src="img/customer.svg" alt="customer">
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a href="" class="footer-banner"><img src="img/ft-banner.png" alt="NOL카드 배너"></a>
+                    </footer>
+                </div>
+                <!-- responsive -->
+                <button class="toggle-menu">
+                    <span></span>
+                </button>
+            </div>
+            <div class="hmenu">
+                <ul class="flex">
+                    <li><a class="h6" href="">항공권</a></li>
+                    <li><a class="h6" href="">숙소</a></li>
+                    <li><a class="h6" href="">투어·티켓</a></li>
+                    <li><a class="h6" href="">에어텔·패키지</a></li>
+                    <li><a class="h6" href="">선착순 핫딜</a></li>
+                    <li><a class="h6" href="">여행자 보험</a></li>
+                    <li><a class="h6" href="">렌터카</a></li>
+                    <li><a class="h6" href="">유심·이심</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="title">
+        <div class="twrap wrap padding50">
+            <h2 class="hide">여행지 타이틀 이미지</h2>
+            <div class="tcon">
+                <ul class="titleslick">
+                    <li class="tbox timg1">
+                        <div class="tbox2">
+                            <h3 class="h3">일본 여행 기념품<span class="block">이것만은 꼭!</span></h3>
+                            <p>일본 필수 쇼핑 아이템 총정리</p>
+                            <a class="more" href="">지금 보러가기</a>
+                        </div>
+                    </li>
+                    <li class="tbox timg2">
+                        <div class="tbox2">
+                            <h3 class="h3">동남아 투어·티켓<span class="block">최대 32% 할인</span></h3>
+                            <p>방콕, 다낭, 나트랑, 싱가포르 등</p>
+                            <a class="more" href="">최저가 보기</a>
+                        </div>
+                    </li>
+                    <li class="tbox timg3">
+                        <div class="tbox2">
+                            <h3 class="h3">해외에서 놀 때,<span class="block">NOL 카드</span></h3>
+                            <p>해외항공권 최대 39% 할인!</p>
+                            <a class="more" href="">혜택 더보기</a>
+                        </div>
+                    </li>
+                    <li class="tbox timg4">
+                        <div class="tbox3">
+                            <h3 class="h3">트리플과 함께 하는<span class="block">최저가 탐색</span></h3>
+                            <p>항공권 특가·혜택 모음</p>
+                            <a class="more" href="">지금 보러가기</a>
+                        </div>
+                    </li>
+                    <li class="tbox timg5">
+                        <div class="tbox3">
+                            <h3 class="h3">아는 사람만 아는<span class="block">세계 곳곳의 핫플</span></h3>
+                            <p>#트립회원만 #알고있자 #소곤소곤</p>
+                            <a class="more" href="">지금 보러가기</a>
+                        </div>
+                    </li>
+                    <li class="tbox timg6">
+                        <div class="tbox3">
+                            <h3 class="h3">흔하지 않은<span class="block">일본 여행지, 도카이</span></h3>
+                            <p>#오사카? #도쿄? #도카이!</p>
+                            <a class="more" href="">지금 보러가기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="hotple">
+        <div class="wrap paddingB100 paddingT100">
+            <h2 class="h4">인기 도시</h2>
+            <ul class="hotpleslick">
+                <li class="hpbox1 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple1" src="img/hp1.png" alt="글리코상이 있는 오사카 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3 class="h5">OSAKA</h3>
+                                    <p class="p">바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
                     </a>
+                    <h4 class="p">오사카, 교토, 고베, 나라</h4>
                 </li>
-                <li><a class="logohover" onclick="window.open('https://github.com/psky95/psky95','_blank');event.preventDefault();">
-                        <svg version="1.1" id="Capa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        width="30px" height="30px" viewBox="0 0 438.549 438.549" style="enable-background:new 0 0 438.549 438.549;"
-                        xml:space="preserve">
-                        <g>
-                        <path id="github" d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
-                            c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
-                            c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996
-                            c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136
-                            c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559
-                            c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559
-                            c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997
-                            c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851
-                            c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136
-                            c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41
-                            c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126
-                            c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817
-                            c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994
-                            c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849
-                            c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24
-                            c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979
-                            c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146
-                            c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995
-                            c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906
-                            C438.536,184.851,428.728,148.168,409.132,114.573z"/>
-                        </g>
-                        </svg>
+                <li class="hpbox2 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple2" src="img/hp2.png" alt="푸른 하늘 아래에 도쿄도시의 전체적인 풍경을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>TOKYO</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">도쿄, 하코네, 요코하마, 가마쿠라</h4>
+                </li>
+                <li class="hpbox3 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple3" src="img/hp3.png" alt="사쿠라이 후타미가우라 이토시마의 도리이 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>FUKUOKA</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">후쿠오카, 유후인, 벳푸, 기타큐슈</h4>
+                </li>
+                <li class="hpbox4 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple4" src="img/hp4.png" alt="에펠탑이 보이는 풍경을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>PARIS</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">파리, 베르사유, 몽생미셸, 스트라스부르</h4>
+                </li>
+                <li class="hpbox5 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple5" src="img/hp5.png" alt="노을이 지고 있는 다낭 해변의 풍경을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>DANANG</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">다낭, 호이안, 후에</h4>
+                </li>
+                <li class="hpbox6 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple6" src="img/hp6.png" alt="태국 사원의 풍경을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>BANGKOK</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">방콕, 파타야, 후아힌, 코사멧</h4>
+                </li>
+                <li class="hpbox7 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <img class="hotple7" src="img/hp7.png" alt="타이페이의 자유광장을 보여주는 사진">
+                            <div class="hovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>TAIPEI</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h4 class="p">타이베이, 이란</h4>
+                </li>
+                <li class="hpbox8 hpflex">
+                    <a class="hoverbox-link" href="">
+                        <div class="hoverbox">
+                            <span class="hotple8"></span>
+                            <div class="nothovergroupbox">
+                                <div class="hovergroup">                                                    
+                                    <h3>전체도시</h3>
+                                    <p>바로가기<span></span></p>
+                                </div>
+                            </div>
+                        </div>
                     </a>
                 </li>
             </ul>
         </div>
-    </header>
-    <!-- div#title>h2 -->
-    <div id="title" class="box">
-        <div class="title-box">
-            <div class="title-overlay">
-                <h2 class="h2">HANEUL'S</h2>
-                <h3 class="h4">Web Publisher Portfolio</h3>
-            </div>
+    </section>
+    <section id="hotel">
+        <div class="wrap paddingT100 paddingB100">
+            <h2 class="h4">일본 인기 호텔</h2>
+            <ul class="hotelslick">
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel1.jpg" alt="소테츠 그랜드 프레사 호텔 오사카점의 이미지">
+                        <section>
+                            <h3 class="ht5">소테츠 그랜드 프레사 오사카 - 난바</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.7<span class="eva">(509)</span></p>
+                                <p><span class="like"></span>8898</p>
+                                <p class="region">오사카</p>
+                            </div>
+                            <p class="price"><span>5%</span>81,491원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel2.jpg" alt="도미 인 프리미엄 남바 내추럴 핫 스프링 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">도미 인 프리미엄 남바 내추럴 핫 스프링</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.2 <span class="eva">(274)</span></p>
+                                <p><span class="like"></span>7956</p>
+                                <p class="region">오사카</p>
+                            </div>
+                            <p class="price"><span>5%</span>137,328원<span class="block p">트리플 클럽특가</span></p>
+                      </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel3.jpg" alt="칸데오 호텔스 오사카 호텔 남바점의 이미지">
+                        <section>
+                            <h3 class="ht5">칸데오 호텔스 오사카 남바</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.4 <span class="eva">(292)</span></p>
+                                <p><span class="like"></span>3704</p>
+                                <p class="region">오사카</p>
+                            </div>
+                            <p class="price"><span>5%</span>162,670원원<span class="block p">쿠폰할인가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel4.png" alt="커낼 시티 후쿠오카 워싱턴 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>  
+                        <section>
+                            <h3 class="ht5">커낼 시티 후쿠오카 워싱턴 호텔</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.5 <span class="eva">(339)</span></p>
+                                <p><span class="like"></span>6522</p>
+                                <p class="region">후쿠오카</p>
+                            </div>
+                            <p class="price"><span>5%</span>76,148원<span class="block p">트리플 클럽특가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel5.jpg" alt="오리엔탈 호텔 후쿠오카 하카타 스테이션의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">오리엔탈 호텔 후쿠오카 하카타 스테이션</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.7 <span class="eva">(43)</span></p>
+                                <p><span class="like"></span>1427</p>
+                                <p class="region">후쿠오카</p>
+                            </div>
+                            <p class="price"><span>5%</span>132,871원<span class="block p">트리플 클럽특가</span></p>
+                      </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel6.jpg" alt="호텔 WBF 그란데 하카타의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>  
+                        <section>
+                            <h3 class="ht5">호텔 WBF 그란데 하카타</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.3 <span class="eva">(109)</span></p>
+                                <p><span class="like"></span>1738</p>
+                                <p class="region">후쿠오카</p>
+                            </div>
+                            <p class="price">78,462원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel7.jpg" alt="신주쿠 워싱턴 호텔 메인의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">신주쿠 워싱턴 호텔 메인</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.5 <span class="eva">(184)</span></p>
+                                <p><span class="like"></span>5588</p>
+                                <p class="region">도쿄</p>
+                            </div>
+                            <p class="price"><span>5%</span>120,381원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel8.jpg" alt="렘 롯폰기 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">렘 롯폰기</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.3 <span class="eva">(509)</span></p>
+                                <p><span class="like"></span>3335</p>
+                                <p class="region">도쿄</p>
+                            </div>
+                            <p class="price"><span>5%</span>152,728원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel9.jpg" alt="도미 인 프리미엄 긴자 핫스프링스 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">도미 인 프리미엄 긴자 핫스프링스</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.9 <span class="eva">(12)</span></p>
+                                <p><span class="like"></span>28</p>
+                                <p class="region">도쿄</p>
+                            </div>
+                            <p class="price"><span>5%</span>242,213원<span class="block p">트리플 클럽특가</span></p>
+                      </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel10.jpg" alt="라겐트 스테이 삿포로 오도리 훗카이도 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-best">트리플 BEST</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">라겐트 스테이 삿포로 오도리 훗카이도</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.6 <span class="eva">(106)</span></p>
+                                <p><span class="like"></span>1838</p>
+                                <p class="region">삿포로</p>
+                            </div>
+                            <p class="price"><span>5%</span>144,640원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel11.jpg" alt="도미 인 프리미엄 삿포로 핫 스피링 호텔의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">도미 인 프리미엄 삿포로 핫 스피링</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.7 <span class="eva">(78)</span></p>
+                                <p><span class="like"></span>1263</p>
+                                <p class="region">삿포로</p>
+                            </div>
+                            <p class="price"><span>5%</span>156,554원<span class="block p">트리플 회원가</span></p>
+                        </section>
+                    </a>
+                </li>
+                <li class="hotellist">
+                    <a href="#">
+                        <img src="img/hotel12.png" alt="호텔 마하이나 웰니스 리조트 오키나와의 이미지">
+                        <div class="badgebox">
+                            <span class="badge-single">단독 특가</span>
+                        </div>
+                        <section>
+                            <h3 class="ht5">호텔 마하이나 웰니스 리조트 오키나와</h3>
+                            <div class="flex p pgroup">
+                                <p><span class="rating"></span>4.8 <span class="eva">(106)</span></p>
+                                <p><span class="like"></span>1682</p>
+                                <p class="region">오키나와</p>
+                            </div>
+                            <p class="price"><span>5%</span>89,558원<span class="block p">쿠폰 할인가</span></p>
+                        </section>
+                    </a>
+                </li>
+            </ul>
+            <a href="" class="more">더보기<span></span></a>
         </div>
-        <!-- 타이틀 무비 & 이미지 -->
-        <div class="fullscreen-bg">
-            <div class="video-container">
-                <video class="fullscreen-bg__video" autoplay loop muted>
-                    <source src="video/Untitled.mp4" type="video/mp4">
-                </video>
-                <img src="img/tmuje4.png" alt="" class="fullscreen-bg__image">
-            </div>
+    </section>
+    <section id="item">
+        <div class="wrap paddingT100 paddingB100">
+            <h2 class="h4">일본 필수템 최저가 모음</h2>
+            <ul class="itemslick">
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item1.png" alt="도쿄 지하철 패스 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[도쿄] 도쿄 지하철 패스 (24H · 48H · 72H)</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(241)</span><span class="like"></span>1582</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">20%</span>9,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item2.png" alt="오사카 주유패스 티켓 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[간사이] 오사카 주유패스 2일권</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.7 <span class="eva">(118)</span><span class="like"></span>2248</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">19%</span>32,000원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item3.png" alt="난카이 라피트 특급열차 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[오사카] 난카이 라피트 특급열차</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(321)</span><span class="like"></span>1982</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">20%</span>9,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item4.png" alt="JR - WEST 하루카 열차 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[간사이] JR - WEST 하루카 (간사이 공항 ↔ 교토 편도)</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(284)</span><span class="like"></span>845</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">19%</span>15,700원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item5.png" alt="한큐 투어리스트 패스 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[간사이] 한큐 투어리스트 패스 1일권/2일권</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(147)</span><span class="like"></span>962</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">19%</span>6,500원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item6.png" alt="간사이 리무진 버스 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[간사이] 간사이 리무진 버스</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.9 <span class="eva">(264)</span><span class="like"></span>468</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">18%</span>9,800원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item7.png" alt="오사카 간사이 쓰루패스 티켓 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[즉시확정] 오사카 간사이 쓰루패스 2일권/3일권</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.7 <span class="eva">(162)</span><span class="like"></span>524</p>
+                                <p class="region">오사카<span class="item-type">교통수단</span></p>
+                            </div>
+                            <p class="price flex">38,950원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item8.png" alt="교토의 로쿠온지 사찰의 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[여행 한 그릇] 일본 관서지방 오사카 출발 교토 버스 투어</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.1 <span class="eva">(84)</span><span class="like"></span>152</p>
+                                <p class="region">오사카<span class="item-type">투어/관광</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">15%</span>55,000원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item9.png" alt="소프트뱅크 eSIM 이미지 사진 ">
+                        <section>
+                            <h3 class="ht5">[eSIM]] 일본전국 커버 소프트뱅크 로컬망 데이터 매일 1기가/2기가</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.8 <span class="eva">(214)</span><span class="like"></span>1184</p>
+                                <p class="region">일본 전국<span class="item-type">와이파이/유심</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">14%</span>3,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item10.png" alt="SKT 포켓와이파이의 이미지 사진">
+                        <section>
+                            <h3 class="ht5">SKT 해외 포켓와이파이 무제한 데이터 로밍 일본</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.8 <span class="eva">(318)</span><span class="like"></span>1852</p>
+                                <p class="region">일본 전국<span class="item-type">와이파이/유심</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">16%</span>3,000원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item11.png" alt="유니버셜 스튜디오 재팬 포스터 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[오사카] 유니버셜 스튜디오 재팬 1일 입장권</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.7 <span class="eva">(694)</span><span class="like"></span>1138</p>
+                                <p class="region">오사카<span class="item-type">테마파크</span></p>
+                            </div>
+                            <p class="price">79,700원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item12.png" alt="유니버셜 스튜디오 재팬 입구정면 사진">
+                        <section>
+                            <h3 class="ht5">오사카 유니버셜 스튜디오 재팬 익스프레스 패스 4</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 3.7 <span class="eva">(152)</span><span class="like"></span>282</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex">9,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item13.png" alt="유니버셜 스튜디오 재팬 안에 있는 어트랙션 이미지 사진">
+                        <section>
+                            <h3 class="ht5">오사카 유니버셜 스튜디오 재팬 익스프레스 패스 7</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.0 <span class="eva">(208)</span><span class="like"></span>302</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">19%</span>174,100원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item14.png" alt="오사카 하루카스 300 전망대 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[즉시 확정] 하루카스 300 전망대 입장권</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.6 <span class="eva">(294)</span><span class="like"></span>502</p>
+                                <p class="region">오사카<span class="item-type">테마파크</span></p>
+                            </div>
+                            <p class="price flex">12,650원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item15.png" alt="오사카 팀랩 보태니컬 가든 이미지 사진">
+                        <section>
+                            <h3 class="ht5">오사카 팀랩 보태니컬 가든 입장권</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.7 <span class="eva">(194)</span><span class="like"></span>817</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">17%</span>4,600원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item16.png" alt="오사카 우메다 헵파이브 관람차 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[즉시 확정] 오사카 우메다 헵파이브 관람차 티켓</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.4 <span class="eva">(184)</span><span class="like"></span>863</p>
+                                <p class="region">오사카<span class="item-type">테마파크</span></p>
+                            </div>
+                            <p class="price flex">5,500원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item17.png" alt="소라니와 온천 베이타워 안에 있는 산책길 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[오사카] 소라니와 온천 오사카 베이타워</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.1 <span class="eva">(84)</span><span class="like"></span>152</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">18%</span>21,500원</p>
+                        </section>
+                    </a>
+                </li>
+                <li class="itemlist">
+                    <a href="">
+                        <img src="img/item18.png" alt="우메다 스카이 빌딩 공중정원 이미지 사진">
+                        <section>
+                            <h3 class="ht5">[오사카] 우메다 스카이 빌딩 공중정원</h3>
+                            <div class="pgroup p flex">
+                                <p class="rating-box"><span class="rating"></span> 4.5 <span class="eva">(102)</span><span class="like"></span>960</p>
+                                <p class="region">오사카<span class="item-type">어트랙션</span></p>
+                            </div>
+                            <p class="price flex"><span class="dc">18%</span>12,800원</p>
+                        </section>
+                    </a>
+                </li>
+                
+            </ul>
+            <a href="" class="more">더보기<span></span></a>
         </div>
-        <!-- 스크롤 다운 -->
-        <div class="scroll-downs">
-            <div class="mousey">
-                <div class="scroller"></div>
-            </div>
-            <span class="scrollerspan">scroll down</span>
-        </div>
-        <!-- 사이드 네비 -->
-        <div class="menu">
-            <a class="dot active" href="#title">
-                <span class="forty">Title</span>
-            </a>
-            <a class="dot" href="#about">
-                <span class="fifty">About</span>
-            </a>
-            <a class="dot" href="#skill">
-                <span class="forty">Skill</span>
-            </a>
-            <a class="dot" href="#portfolio">
-                <span class="sixty">Portfolio</span>
-            </a>
-            <a class="dot" href="#contact">
-                <span class="sixty">Contact</span>
-            </a>
-        </div>
-    </div>
-    <!-- 메인 -->
-    <main>
-        <!-- 어바웃 -->
-        <section id="about" class="section box">
-            <div class="wrap padding50">
-                <figure>
-                    <img src="img/pfe1.jpg" alt="박하늘의 프로필이미지 사진">
-                    <figcaption class="hide">박하늘의 프로필이미지 사진</figcaption>
-                </figure>
-                <div class="hello">
-                    <h2>ABOUT</h2>
-                    <div class="about">
-                        <p class="h6">만나서 반갑습니다. 신입 웹 퍼블리셔 박하늘입니다.
-                            <br>웹을 통한 우리의 역할은 곧 그 브랜드의 상품과 기업의 가치를 높이는 일 이라고 생각하며,<br>
-                            그러기 위해 사용자에게 멋진 사용자 경험을 선사하는 것이 시작이라고 생각합니다.
-                            <br>
-                            <br>저는 다양한 직군의 사람들과 함께 멋지고 즐거운 웹을 만드는 데 관심이 많습니다.
-                            <br>그것은 혼자 하는 일이 아닌 만큼 사람들 간의 <span>약속, 그리고 소통</span>이 중요하다고 생각합니다. 
-                            <br>항상 경청하고 열린 자세로 임하며 <span>성장해 나가는 사람</span>이 되겠습니다.
-                    </div>
-                    <div class="career">
-                        <h3 class="h8">Experiences & Education</h3>
-                        <ul>
-                            <li class="h9">2023.06 ~ 2023.10 : UI/UX 웹퍼블리셔&웹디자인 양성과정</li>
-                            <li class="h9">2023.02 ~ 2023.04 : TDS테크-Reverse Engineering/3D Scan 천안 삼성SDI 파견</li>
-                            <li class="h9">2023.01 ~ 2023.02 : TDS테크-Reverse Engineering/3D Scan 평택 삼성중공업 파견</li>
-                            <li class="h9">2018.10 ~ 2022.10 : 이레상사 근무(대리)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- 스킬 -->
-        <section id="skill" class="box">
-            <div class="wrap paddingT50 paddingB50">
-                <figure>
-                    <img src="img/stackimg2.jpg" alt="책상이 있는 사진">
-                    <figcaption class="hide">책상이 있는 사진</figcaption>
-                </figure>    
-                <h2 class="h2">SKILL</h2>
-                <div class="ddtech">
-                    <div class="ditech">
-                        <h3 class="h4">Develop Tech</h3>
-                        <ul class="list">
-                            <li class="h6">재활용, 유지보수가 용이한 코드를 짤 수 있는지 항상 생각하고 노력합니다.</li>
-                            <li class="h6">SEO 최적화를 위해 시멘틱한 마크업을 하고자 하며 웹 표준과 웹 접근성을 준수합니다</li>
-                            <li class="h6">CSS, SCSS 등을 통해 디자인 결과물과 흡사하게 웹에 구현해 낼 수 있으며 반응형 퍼블리싱이 가능합니다.</li>
-                        </ul>
-                        <ul class="list2">
-                            <li>#HTML5</li>
-                            <li>#CSS3</li>
-                            <li>#SCSS</li>
-                            <li>#Javascript(ES6+)</li>
-                            <li>#JQuery</li>
-                            <li>#Vue.js</li>
-                            <li>#PHP</li>
-                        </ul>
-                    </div>
-                    <div class="dgtech">
-                        <h3 class="h4">Disgin Tech</h3>
-                        <ul class="list">
-                            <li class="h6">적절한 디자인 가이드를 기준으로 통일성 있고 일관적인 UI를 제작하여 빠른 피드백과 개발이 가능하게 노력합니다.</li>
-                            <li class="h6">협업의 경험을 살려 여러가지 의견을 반영하여 최적의 결과물을 만들기 위해 노력합니다.</li>
-                            <li class="h6">레이아웃 배치, 컬러 등 사용자에게 최적의 경험을 할 수 있도록 하고, 불편함이 없게 디자인하고자 노력합니다.</li>
-                            <li class="h6">포토샵, IA를 이용한 간단한 디자인 및 편집 작업이 가능합니다.</li>
-                        </ul>
-                        <ul class="list2">
-                            <li>#Photoshop</li>
-                            <li>#Illustrator</li>
-                            <li>#XD</li>
-                            <li>#KakaoOven</li>
-                            <li>#After Effects</li>
-                        </ul>
-                    </div>
-                </div>    
-            </div>
-        </section>
-        <!-- 포트폴리오 -->
-        <section id="portfolio" class="box">
-            <div class="wrap paddingB100 paddingT100">
-                <h2 class="h2">PORTFOLIO</h2>
-                <div class="slick-slider js-slick">
-                    <!-- 1 -->
-                    <div class="pfpackage">
-                        <div class="pfbox1">
-                            <a href="https://psky95.github.io/triple/" target="_blank" class="imgbox">
-                                <img src="img/pf-triple.png" alt="트리플 홈페이지 섬네일 이미지">
-                            </a>
-                            <div class="pftitle">
-                                <a class="pfh" href="">
-                                    <div>
-                                        <h3 class="h4">트리플</h3>
-                                        <h4 class="h5">기업 사이트 제작</h4>
-                                    </div>
-                                    <ul class="hashtag">
-                                        <li class="p"><span class="">#PC</span></li>
-                                        <li class="p"><span class="">#반응형</span></li>
-                                        <li class="p"><span class="">#하드코딩</span></li>
-                                        <li class="p"><span class="">#제작 100%</span></li>
-                                    </ul>
-                                </a>
-                                <div class="button-flex">
-                                    <button class="more" onclick="window.open('https://psky95.github.io/triple/','_blank');event.preventDefault();"><span class="h6">상세보기</span></button>
-                                    <button class="more" onclick="window.open('https://drive.google.com/drive/folders/1tE29-4j6XhHi0aojbgvTLx4MD034JuX9?usp=sharing','_blank');event.preventDefault();"><span class="h6">기획서 보기</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 2 -->
-                    <div class="pfpackage">
-                        <div class="pfbox2">
-                            <a href="https://psky95.github.io/beer_festival/" target="_blank" class="imgbox">
-                                <img src="img/pf-songdo.png" alt="송도 맥주축제 홈페이지 섬네일 이미지">
-                            </a>
-                            <div class="pftitle">
-                                <a class="pfh" href="https://psky95.github.io/beer_festival/" target="_blank">
-                                    <div>
-                                        <h3 class="h4">송도 맥주축제</h3>
-                                        <h4 class="h5">홍보 사이트 제작</h4>
-                                    </div>
-                                    <ul class="hashtag">
-                                        <li class="p"><span class="">#PC</span></li>
-                                        <li class="p"><span class="">#반응형</span></li>
-                                        <li class="p"><span class="">#하드코딩</span></li>
-                                        <li class="p"><span class="">UI/UX 리뉴얼</span></li>
-                                        <li class="p"><span class="">#제작 100%</span></li>
-                                    </ul>
-                                </a>
-                                <div class="button-flex">
-                                    <button class="more" onclick="window.open('https://psky95.github.io/beer_festival/','_blank');event.preventDefault();"><span class="h6">상세보기</span></button>
-                                    <button class="more" onclick="window.open('https://drive.google.com/drive/folders/1bmMkY18Rkmog5iffa7TnXcgPrKvDUDKm?usp=sharing','_blank');event.preventDefault();"><span class="h6">기획서 보기</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 3 -->
-                    <div class="pfpackage">
-                        <div class="pfbox3">
-                            <a href="" class="imgbox">
-                                <img src="img/pf-hite.png" alt="하이트 진로 홈페이지 섬네일 이미지">
-                            </a>
-                            <div class="pftitle">
-                                <a class="pfh" href="">
-                                    <div>
-                                        <h3 class="h4">하이트 진로</h3>
-                                        <h4 class="h5">기업 사이트 제작</h4>
-                                    </div>
-                                    <ul class="hashtag">
-                                        <li class="p"><span class="">#PC</span></li>
-                                        <li class="p"><span class="">#Jquery</span></li>
-                                        <li class="p"><span class="">#하드코딩</span></li>
-                                        <li class="p"><span class="">#제작 100%</span></li>
-                                    </ul>
-                                </a>
-                                <div class="button-flex">
-                                    <button class="more" onclick="window.open('https://psky95.github.io/jinro_hite/','_blank');event.preventDefault();"><span class="h6">상세보기</span></button>
-                                    <button class="more" onclick="window.open('https://drive.google.com/drive/folders/1bQYBCtYzCf6HLGB-f48ZIWaFqWBTNT98?usp=sharing','_blank');event.preventDefault();"><span class="h6">기획서 보기</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 4 -->
-                    <div class="pfpackage">
-                        <div class="pfbox4">
-                            <a href="" class="imgbox">
-                                <img src="img/pf-kai.png" alt="한국알콜산업 홈페이지 섬네일 이미지">
-                            </a>
-                            <div class="pftitle">
-                                <a class="pfh" href="">
-                                    <div>
-                                        <h3 class="h4">한국알콜산업</h3>
-                                        <h4 class="h5">기업 사이트 제작</h4>
-                                    </div>
-                                    <ul class="hashtag">
-                                        <li class="p"><span class="">#PC</span></li>
-                                        <li class="p"><span class="">#반응형</span></li>
-                                        <li class="p"><span class="">#하드코딩</span></li>
-                                        <li class="p"><span class="">#제작 100%</span></li>
-                                    </ul>
-                                </a>
-                                <div class="button-flex">
-                                    <button class="more" onclick="window.open('https://psky95.github.io/kai/','_blank');event.preventDefault();"><span class="h6">상세보기</span></button>
-                                    <button class="more" onclick="window.open('https://drive.google.com/drive/folders/1hKG7jqbzQtTf3XrSyebN3rp-6KUTkhLX?usp=sharing','_blank');event.preventDefault();"><span class="h6">기획서 보기</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 5 -->
-                    <div class="pfpackage">
-                        <div class="pfbox5">
-                            <a href="" class="imgbox">
-                                <img src="img/pf-cgv.png" alt="CGV 홈페이지 섬네일 이미지">
-                            </a>
-                            <div class="pftitle">
-                                <a class="pfh" href="">
-                                    <div>
-                                        <h3 class="h4">CGV</h3>
-                                        <h4 class="h5">기업 사이트 제작</h4>
-                                    </div>
-                                    <ul class="hashtag">
-                                        <li class="p"><span class="">#PC</span></li>
-                                        <li class="p"><span class="">#Jquery</span></li>
-                                        <li class="p"><span class="">#하드코딩</span></li>
-                                        <li class="p"><span class="">#제작 100%</span></li>
-                                    </ul>
-                                </a>
-                                <div class="button-flex">
-                                    <button class="more" onclick="window.open('https://psky95.github.io/cgv/','_blank');event.preventDefault();"><span class="h6">상세보기</span></button>
-                                    <button class="more" onclick="window.open('https://drive.google.com/drive/folders/1_xC3BNYRheFx_LbzaGADQ5fnv9kRv0x-?usp=sharing','_blank');event.preventDefault();"><span class="h6">기획서 보기</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 6 -->
-                    <div class="pfpackage">
-                        <div class="pfbox6">
-                            <a href="" class="imgbox">
-                                <img src="img/pf-samsung.png" alt="삼성닷컴 홈페이지 섬네일 이미지">
-                            </a>
-                            <div class="pftitle">
-                                <a class="pfh" href="">
-                                    <div>
-                                        <h3 class="h4">삼성닷컴 리뉴얼</h3>
-                                        <h4 class="h5">기업 사이트 리뉴얼 제작</h4>
-                                    </div>
-                                    <ul class="hashtag">
-                                        <li class="p"><span class="">#PC</span></li>
-                                        <li class="p"><span class="">#UI/UX리뉴얼</span></li>
-                                        <li class="p"><span class="">#하드코딩</span></li>
-                                        <li class="p"><span class="">#제작 100%</span></li>
-                                    </ul>
-                                </a>
-                                <div class="button-flex">
-                                    <button class="more" onclick="window.open('https://psky95.github.io/samsung/','_blank');event.preventDefault();"><span class="h6">상세보기</span></button>
-                                    <button class="more" onclick="window.open('https://drive.google.com/drive/folders/1N5qtvXJ2_gv_opWh4QSvCiVWM5TUNX_p?usp=sharing','_blank');event.preventDefault();"><span class="h6">기획서 보기</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 7 -->
-                    <div class="pfpackage">
-                        <div class="pfbox7">
-                            <a href="" class="imgbox">
-                                <img src="img/pf-pf.png" alt="하늘의 웹 홈페이지 섬네일 이미지">
-                            </a>
-                            <div class="pftitle">
-                                <a class="pfh" href="">
-                                    <div>
-                                        <h3 class="h4">SKY</h3>
-                                        <h4 class="h5">포트폴리오 사이트</h4>
-                                    </div>
-                                    <ul class="hashtag">
-                                        <li class="p"><span class="">#PC</span></li>
-                                        <li class="p"><span class="">#Jquery</span></li>
-                                        <li class="p"><span class="">#하드코딩</span></li>
-                                        <li class="p"><span class="">#제작 100%</span></li>
-                                    </ul>
-                                </a>
-                                <div class="button-flex">
-                                    <button class="more" onclick="window.open('https://github.com/psky95/pasky95_Pf_Site','_blank');event.preventDefault();"><span class="h6">상세보기</span></button>
-                                    <button class="more" onclick="window.open('https://drive.google.com/drive/folders/15ZGjIAxEHgH5deGpcFfQlZLhc_7M4Wqd?usp=sharing','_blank');event.preventDefault();"><span class="h6">기획서 보기</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 8 -->
-                    <div class="pfpackage">
-                        <div class="pfbox8">
-                            <a href="" class="imgbox">
-                                <img src="img/pf-jq.png" alt="제이쿼리 홈페이지 섬네일 이미지">
-                            </a>
-                            <div class="pftitle">
-                                <a class="pfh" href="">
-                                    <div>
-                                        <h3 class="h4">제이쿼리</h3>
-                                        <h4 class="h5">제이쿼리 예제사이트</h4>
-                                    </div>
-                                    <ul class="hashtag">
-                                        <li class="p"><span class="">#PC</span></li>
-                                        <li class="p"><span class="">#Jquery</span></li>
-                                        <li class="p"><span class="">#하드코딩</span></li>
-                                        <li class="p"><span class="">#구현 50%</span></li>
-                                    </ul>
-                                </a>
-                                <div class="button-flex">
-                                    <button class="more" onclick="window.open('https://psky95.github.io/jquery_coding/','_blank');event.preventDefault();"><span class="h6">상세보기</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- 컨택트 -->
-        <section id="contact" class="box">
-            <div class="wrap paddingB100 paddingT100">
-                <h2 class="h2 hide">CONTACT</h2>
-                <div class="ctbox">
-                    <div class="ctimg">
-                        <img src="img/pfe2.jpg" alt="하늘의 프로필이미지">
-                    </div>
-                    <div class="ctinfo">
-                        <h3 class="h4">I dare not say that I have achieved anything.
-                            <br>Still learning, and learning is infinite.</h3>
-                        <div class="ctinfop">
-                            <p class="h6">저는 여전히 배우고 있으며, 배움은 무한하다고 생각합니다.
-                                <br>다양한 사람들, 상황들을 통해 배우고 성장하며
-                                <br>자신이 더 나은 방향으로 향하도록 노력하는 사람이 되겠습니다.
-                                <br>
-                                <br>어제를 보지 않고 내일을 보며 노력하는,
-                                <br>UI/UX 개발자 <span>박하늘</span>입니다.
-                                <br>보러 와주셔서 감사합니다.
-                            </p>
-                        </div>
-                        <div class="ctsitego">
-                            <button class="more"><span class="h5">E-Mail</span></button>
-                            <button class="more"><span class="h5">KakaoTalk</span></button>
-                            <button class="more" onclick="window.open('https://github.com/psky95/psky95','_blank');event.preventDefault();"><span class="h5">GitHub</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- 푸터 -->
-    <footer>
-        <section id="footer">
-            <h2 class="hide">Footer Section</h2>
-            <div class="ftbox wrap paddingB100 paddingT100">
-                <div class="ftinfo">
-                    <p class="p">본 페이지는 상업적 목적이 아닌<span class="block">개인 포트폴리오용으로 제작되었습니다.</span></p>
-                    <p class="p">© 2023 Park-Ha-Neul. All Rights Reserved.</p>
-                </div>
-            </div>
-        </section>
-    </footer>
-    <!-- 햄버거 (반응형) -->
-    <!-- <button class="toggle-menu">
-        <span></span>
-    </button>
-    <div id="menu" class="">
-        <nav class="main-nav">
+    </section>
+    <section id="travel">
+        <div class="wrap paddingB100 paddingT100">
+            <h2 class="h4">트리플 인기 여행지</h2>
             <ul>
                 <li>
-                  <a href="#">
-                    ABOUT
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    SKILL
-                  </a>
-                </li>
-                <li>
-                    <a href="#">
-                      PORTFOLIO
+                    <a href="" class="travel-card1">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-dokyo-1.png" alt=""></div>
+                            <div class="con2"><img src="img/travel/tv-dokyo-2.png" alt=""></div>
+                            <div class="con3"><img src="img/travel/tv-dokyo-3.png" alt=""></div>
+                            <div class="con4"><img src="img/travel/tv-dokyo-4.png" alt=""></div>
+                            <div class="con5"><img src="img/travel/tv-dokyo-5.png" alt=""></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">🇯🇵 8월 말 4박 5일 도쿄여행 🇯🇵</h3>
+                            <p class="schedule p2">하늘님의 일정<span class="day">4박 5일</span></p>
+                            <p class="travel-ct p2">🗓 2023.08.21-2023.08.25
+                                <span class="block">✈ 인천>도쿄 : 07:55-10:20</span>
+                                ✈ 도쿄>인천 : 19:10-22:00
+                                    > 인당 항공권 30만원
+                                🏡 소테츠 프레사 인 니혼바시 닌교초 : 4박 5일 30만원. 방은 깔끔하지만 많이 작은 편이다. 침대를 제외한 빈 공간에 캐리어 두개 놓으면 꽉차는 정도!
+                                💴 환전 7만엔 + 숙소 30만원 + 교통비(스카이라이너, 도쿄매트로패스) 15만원 + 액티비티 및 기타(디즈니•전시회 등 바우처, 보험, e-sim) 50만원 + 각자 면세품 30만원 구매
+                                     > 인당 100만원
+                                🍽 motomura(규카츠/시부야, 신주쿠, 아키하바라, 니혼바시)
+                                🍽 tenkichiya(텐동/신주쿠/2시 L.O/신주쿠 노무라 빌딩 지하 2층)
+                                🍽 gyukaku(야키니쿠/니혼바시, 아키하바라, 신주쿠, 시부야)
+                                🍽 tamatoya(몬자야키/도쿄역, 긴자)
+                                🍽 kura-sushi(회전초밥/아사쿠사, 긴자, 시부야, 신주쿠, 아키하바라)
+                                🍽 menyamusashi(츠케멘/니혼바시, 시부야, 신주쿠, 아키하바라, 도쿄타워)
+                            </p>
+                            <figure>
+                                <img src="img/travel/tv-dokyo-6.png" alt="하늘의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
                     </a>
-                  </li>
-                <li>
-                  <a href="#">
-                    CONTACT
-                  </a>
-                </li>
-              </ul>
-        </nav>
-        <footer class="menu-footer">
-            <nav class="footer-nav">
-              <ul>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-twitter fa-fw"></i>
-                    Github
-                  </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="fa fa-envelope fa-fw"></i>
-                    Kakaotalk
-                  </a>
+                    <a href="" class="travel-card2">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-sapporo.png" alt="오사카 오도리 공원 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">폭염을 뚫고 간 여름 삿포로 3박 4일</h3>
+                            <p class="schedule p2">라마님의 일정<span class="day">3박 4일</span></p>
+                            <p class="travel-ct p2">#삿포로 #8월출발 #3박4일 #유명관광지는필수 #
+                                <span class="block">여행지느낌물씬 #관광보다먹방 #친구와</span>
+                            </p>
+                            <figure>
+                                <img src="img/travel/tv-sapporo-1.png" alt="라마의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
                 </li>
-              </ul>
-            </nav>
-          </footer>
-    </div> -->
+                <li>
+                    <a href="" class="travel-card1">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-osaka-1.png" alt="오사카 글리코상의 정면 이미지 사진"></div>
+                            <div class="con2"><img src="img/travel/tv-osaka-2.png" alt="오사카 스카이빌딩에서의 문모모님 이미지 사진"></div>
+                            <div class="con3"><img src="img/travel/tv-osaka-3.png" alt="오사카 전철에서의 문모모님 이미지 사진"></div>
+                            <div class="con4"><img src="img/travel/tv-osaka-4.png" alt="문모모님의 기모노 이미지 사진"></div>
+                            <div class="con5"><img src="img/travel/tv-osaka-5.png" alt="공항에서의 문모모님 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">오사카&교토로 떠난 P(하욘, 수정)의 첫 자유여행</h3>
+                            <p class="schedule p2">문모모의 일정<span class="day">4박 5일</span></p>
+                            <p class="travel-ct p2">첫 자유여행이므로 우왕좌왕했지만 무사히 다녀왔다. 
+                                <span class="block">친한 친구와 함께라서 어떠한 고난(비행기 놓침)도 즐거웠다..</span></p>
+                            <figure>
+                                <img src="img/travel/tv-osaka-6.png" alt="문모모님의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="travel-card1">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-nagoya-1.png" alt="나고야 타워의 이미지 사진"></div>
+                            <div class="con2"><img src="img/travel/tv-nagoya-2.png" alt="나고야 온천에 발을 담근 이미지 사진"></div>
+                            <div class="con3"><img src="img/travel/tv-nagoya-3.png" alt="나고야 온천의 전경풍경을 담은 이미지 사진"></div>
+                            <div class="con4"><img src="img/travel/tv-nagoya-4.png" alt="나고야 온천에 발을 담근 이미지 사진"></div>
+                            <div class="con5"><img src="img/travel/tv-nagoya-5.png" alt="나고야 온천의 저녁식사 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">5박 6일 나고야 겨울여행!!</h3>
+                            <p class="schedule p2">민지님의 일정<span class="day">4박 5일</span></p>
+                            <p class="travel-ct p2">나고야는 다들 노잼도시라고 하지만,, 근교까지 보
+                                <span class="block">면 정말 할게 많은 도시에요!! 맛있는 음식도 도쿄보다 훨씬 많쿠요...!! </span></p>
+                            <figure>
+                                <img src="img/travel/tv-nagoya-6.png" alt="민지님의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="travel-card2">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-bail-1.png" alt="발리 바다의 전경풍경 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">친구들과의 행복한 일주일, 발리</h3>
+                            <p class="schedule p2">mica님의 일정<span class="day">6박 7일</span></p>
+                            <p class="travel-ct p2">모든걸 만끽하고픈 중년친구들의 일상을 떠난 행복
+                                <span class="block">한 여행. 서로 서로 끌어주고 밀어주면서 텐션 끌어오려 쏟아부은 발리 여행~
+                                    학창시절 수학여행을 간듯한 빼곡한 일정과 모두 즐기고픈 열정으로 가득 채워진 다시 가고픈 인생여행이었다!
+                                </span>
+                            </p>
+                            <figure>
+                                <img src="img/travel/tv-bail-2.png" alt="mica님의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="travel-card1">
+                        <div class="travel-con">
+                            <div class="con1"><img src="img/travel/tv-bangkok-1.png" alt="나고야 타워의 이미지 사진"></div>
+                            <div class="con2"><img src="img/travel/tv-bangkok-2.png" alt="나고야 온천에 발을 담근 이미지 사진"></div>
+                            <div class="con3"><img src="img/travel/tv-bangkok-3.png" alt="나고야 온천의 전경풍경을 담은 이미지 사진"></div>
+                            <div class="con4"><img src="img/travel/tv-bangkok-4.png" alt="나고야 온천에 발을 담근 이미지 사진"></div>
+                            <div class="con5"><img src="img/travel/tv-bangkok-5.png" alt="나고야 온천의 저녁식사 이미지 사진"></div>
+                        </div>
+                        <div class="con6">
+                            <h3 class="h6">5박 6일 나고야 겨울여행!!</h3>
+                            <p class="schedule p2">jiihyunnn님의 일정<span class="day">4박 5일</span></p>
+                            <p class="travel-ct p2">나고야는 다들 노잼도시라고 하지만,, 근교까지 보
+                                <span class="block">면 정말 할게 많은 도시에요!! 맛있는 음식도 도쿄보다 훨씬 많쿠요...!! </span></p>
+                            <figure>
+                                <img src="img/travel/tv-bangkok-6.png" alt="jiihyunnn님의 프로필 이미지 사진">
+                                <figcaption class="hide">프로필 이미지에 대한 캡션</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a href="" class="more">더보기<span></span></a>
+        </div>
+    </section>
+    <div id="footer">
+        <div class="wrap paddingT100 paddingB100 flex">
+            <div class="fb1 flex flex-column">
+                <ul>
+                    <li><a href="">서비스 이용약관</a><a href="">개인정보 처리방침</a><a href="">고객센터</a></li>
+                    <li>
+                        <p class="fb-name">(주)인터파크트리플 <span>대표 : 최휘영</span></p>
+                        <p class="fb-number">사업자 등록번호 : 824-81-02515<span>통신판매업 신고번호 2022-서울강남-02179</span></p>
+                        <address>주소 : 서울특별시 강남구 삼성로 512 삼성동빌딩 10층 <span><br>이메일 : help@triple-corp.com</span></address>
+                        <p class="p2">㈜인터파크트리플은 통신판매중개로서 통신판매의 당사자가 아니며 상품 거래정보 및 거래등에 대해 책임을 지지 않습니다.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="fb2">
+                <ul>
+                    <li>
+                        <h2 class="p">카카오톡</h2>
+                        <h3 class="p"><a href="">@트리플서비스</a></h3>
+                    </li>
+                    <li>
+                        <h3 class="p">국내</h3>
+                        <p ><a href="" class="fb2korea">1588-2539</a></p>
+                    </li>
+                    <li>
+                        <h3 class="p">해외에서</h3>
+                        <p class="p"><a href="">(+82)2-1588-2539</a></p>
+                    </li>
+                    <li>
+                        <p class="fb2clock p2">오전 9시 - 오후 6시 (한국시간 기준, 연중무휴)<span class="block">단, 항공문의는 주말/공휴일 제외</span></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="fb3 flex flex-column">
+                <div class="fb3a">
+                    <a href="" class="link-go">로그인</a>
+                    <a href="" class="link-go">트리플 앱<span></span></a>
+                </div>
+                <div class="fb3c">
+                    <img src="img/ISMS.png" alt="정보보호 관리체계 인증 로고 이미지">
+                    <img src="img/ISMS-P.png" alt="정보보호 및 개인정보보호 관리체계 인증 로고 이미지">
+                </div>
+            </div>
+        </div>
+        <a href="#top" id="scrollToTopButton" class="btop">TOP</a>
+    </div>
 </body>
 </html>

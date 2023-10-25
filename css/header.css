@@ -6,18 +6,15 @@
   
 }
 #header .head div.flex {
-  
-  padding-top: 20px;
+  padding-top: 1.25rem;
   position: relative;
 }
 #header .head div.flex h1 {
-  
   display: flex;
 }
-#header .head div.flex h1 > a{
-  
+#header .head div.flex h1 > a{ 
   font-weight: 600;
-  font-size: 36px;
+  font-size: 2.25rem;
   display: flex;
   align-items: center;
 }
@@ -50,23 +47,33 @@
   border: 1px solid #eee;
   width: 250px;
   height: 15px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .searchwrap {
     position: relative;
+    display: flex;
 }
-
+.searchwrap button{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 1rem;
+  bottom: 11px;
+  border: none;
+  cursor: pointer;
+}
+.searchwrap button:hover{
+  background-color: transparent;
+  border: inherit;
+}
 .search-icon {
     content: "";
     background-image: url(../img/search.png);
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    right: 15px; 
-    top: 50%;
-    transform: translateY(-50%);
+    width: 1.6875rem;
+    height: 1.6875rem;
     background-size: contain;
     background-repeat: no-repeat;
+    display: block;
 }
 #header .head div.flex h1 input:focus {
     outline: none; 
@@ -82,12 +89,15 @@
 #header .head div.flex > ul li {
   
 }
-#header .head div.flex > ul li a:not(#menu a) { 
+#header .head div.flex > ul li a:not(#menu a, .search_box a) { 
   padding: 7.5px 7.5px;
 /*   transition: all 0.7s; */
 }
-#header .head div.flex > ul li a:hover:not(#menu a){
+#header .head div.flex > ul li a:hover:not(#menu a, .search_box a){
   background-color:#eee;
+}
+#header .head div.flex > ul .search_box{
+  display: none;
 }
 #header .head div.hmenu {
   

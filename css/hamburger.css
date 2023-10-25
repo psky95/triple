@@ -1,124 +1,207 @@
-#menu {
-    background: #222;
+  #menu {
+    background: #fff;
     height: 100%;
-    left: 0;
+    right: -100%;
     opacity: 0;
-    overflow: hidden;
+    /*! overflow: hidden; */
     position: fixed;
     text-align: center;
     top: 0;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.4s;
     visibility: hidden;
-    width: 100%;
+    width: 85%;
     z-index: 1100;
+    box-sizing: border-box;
   }
   #menu.open {
     opacity: 1;
     visibility: visible;
+    right: 0;
   }
-  #menu.open li:nth-child(1) {
-    -webkit-animation-delay: 0.1s;
-            animation-delay: 0.1s;
+  #menu .menu-head{
+
+  align-items: center;
+  display: inline-flex;
+  transform: translateY(10px);
+  width: 100%;
+  justify-content: end;
+  transform: translateX(-80px) translateY(12px);
+  gap: 10px;
   }
-  #menu.open li:nth-child(2) {
-    -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s;
+  #menu .menu-head a{
+  font-size: 0;
+  height: 33px;
+  width: 33px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  } 
+  #menu .menu-head a:nth-child(1){
+
+  background-image: url(../img/sidemenu-alarm.svg);
   }
-  #menu.open li:nth-child(3) {
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s;
-  }
-  #menu.open li:nth-child(4) {
-    -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s;
-  }
-  #menu.open li:nth-child(5) {
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
-  }
-  #menu.open li:nth-child(6) {
-    -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s;
-  }
-  #menu.open li:nth-child(7) {
-    -webkit-animation-delay: 0.7s;
-            animation-delay: 0.7s;
-  }
-  #menu.open li:nth-child(8) {
-    -webkit-animation-delay: 0.8s;
-            animation-delay: 0.8s;
-  }
-  #menu.open li:nth-child(9) {
-    -webkit-animation-delay: 0.9s;
-            animation-delay: 0.9s;
-  }
-  #menu.open li:nth-child(10) {
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-  }
-  #menu.open li {
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-name: fadeInUp;
-            animation-name: fadeInUp;
-  }
-  #menu ul:hover a {
-    opacity: 0.5;
-  }
-  #menu ul a {
-    -webkit-transform: translateZ(0);
-    transition: opacity 0.3s ease-in-out;
-  }
-  #menu ul a:hover {
-    opacity: 1;
+  #menu .menu-head a:nth-child(2){
+
+  background-image: url(../img/sidemenu-setting.svg);
   }
   #menu .main-nav {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 430px;
+    padding-top: 40px;
   }
-  #menu .main-nav ul {
+  #menu .main-nav >ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    height: 100%;
+    padding: 0px 30px;
   }
-  #menu .main-nav a {
-    color: #ffffff;
-    display: block;
-    font-size: 3.5rem;
-    font-weight: bold;
-    padding: 1rem 1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    line-height: 1.6;
+  #menu .main-nav >ul #user-box{
+
   }
-  #menu .main-nav a:first {
-    padding-top: 0;
+  #menu .main-nav >ul #user-box > ul.my-box{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto auto;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+  #menu .main-nav >ul #user-box > ul.my li{
+    
+  }
+  #menu .main-nav > ul #user-box > ul.my-box li:nth-child(1){
+
+  order: 1;
+  text-align: initial;
+  padding-bottom: 10px;
+  }
+  #menu .main-nav > ul #user-box > ul.my-box li:nth-child(2){
+
+  order: 3;
+  display: flex;
+  gap: 50px;
+    }
+  #menu .main-nav > ul #user-box > ul.my-box li:nth-child(3){
+
+  order: 2;
+  grid-row: span 2;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+    }
+  #menu .main-nav >ul #user-box > ul.my-box li h2{
+
+  line-height: 2;
+  font-size: 1.4rem;
+  font-weight: 600;
+  }
+  #menu .main-nav >ul #user-box > ul.my-box li p{
+
+  display: flex;
+  flex-direction: column-reverse;
+  font-weight: 500;
+  font-size: 0.8rem;
+  }
+  #menu .main-nav >ul #user-box > ul.my-box li p span{
+
+  display: flex;
+  color: #1D9BD6;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  }
+  #menu .main-nav >ul #user-box > ul.my-box li img{
+
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  }
+  #menu .main-nav >ul .user-menu{
+
+  border-top: 1px solid #eee;
+  }
+  #menu .main-nav > ul .user-menu:last-child{
+
+  border-bottom: 1px solid #eee;
+  }
+  #menu .main-nav >ul .user-menu a{
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  }
+  #menu .main-nav >ul .user-menu a h3{
+
+  font-weight: 600;
+  font-size: 1rem;
+  }
+  #menu .main-nav >ul .user-menu a p{
+
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #1D9BD6;
+  font-weight: 600;
+  }
+  #menu .main-nav >ul .user-menu a p span:not(.level-point){
+
+  background-image: url(../img/arrowR.svg);
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin-left: 10px;
+  }
+  #menu .main-nav >ul .user-menu a p .level-point{
+    
   }
   #menu .menu-footer {
-    padding: 2rem;
+    /*! padding: 2rem; */
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
+    background: #fff;
+    height: 312px;
   }
-  #menu .menu-footer ul {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  #menu .menu-footer nav{
+    width: 100%;
+    height: calc(312px - 113px);
   }
-  #menu .menu-footer ul li {
-    display: inline;
-    margin: 0 1rem;
+  #menu .menu-footer nav > ul {
+    display: flex;
+    padding: 10px 30px 0 30px;
+    justify-content: space-between;
   }
-  #menu .menu-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+  #menu .menu-footer nav > ul a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #menu .menu-footer nav > ul a h3{
+    order: 2;
+    line-height: 1.2;
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+  #menu .menu-footer nav > ul a img{
+    width: 30px;
+    height: 30px;
+    order: 1;
+    margin-bottom: 5px;
+  }
+  #menu .menu-footer .footer-banner{
+    width: 100%;
+    display: block;
+    height: 113px;
+  }
+  #menu .menu-footer .footer-banner img{
+
   }
   /* 토글 메뉴 */
   .toggle-menu {
@@ -131,41 +214,46 @@
       outline: none;
       padding: 0;
       pointer-events: initial;
-      position: absolute;
+      /*! position: absolute; */
       vertical-align: middle;
-      width: 50px;
+      width: 33px;
       z-index: 1110;
       right: 270px;
       top: 11.5px;
       display: none;
     }
+    @media screen and (max-width:1140px){
+      .toggle-menu {
+          display: block;
+        }
+    }
     .toggle-menu span {
-      background-color: #fff;
+      background-color: black;
       content: "";
       display: block;
-      height: 2px;
+      height: 3px;
       left: calc(50% - 13px );
-      position: absolute;
+      /*! position: absolute; */
       top: calc(50% - 1px );
       transform-origin: 50% 50%;
       transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-      width: 26px;
+      width: 33px;
     }
     .toggle-menu span:before, .toggle-menu span:after {
-      background-color: #fff;
+      background-color: black;
       content: "";
       display: block;
-      height: 2px;
+      height: 3px;
       position: absolute;
       transform-origin: 50% 50%;
       transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-      width: 26px;
+      width: 32px;
     }
     .toggle-menu span:before {
-      top: 7px;
+      top: 35px;
     }
     .toggle-menu span:after {
-      top: -7px;
+      top: 54px;
     }
     .toggle-menu.active span {
       background-color: transparent;
@@ -175,10 +263,10 @@
       transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
     }
     .toggle-menu.active span:before {
-      top: 0;
+      top: 40px;
       transform: rotate3d(0, 0, 1, -45deg);
     }
     .toggle-menu.active span:after {
-      top: 0;
+      top: 41px;
       transform: rotate3d(0, 0, 1, 45deg);
     }

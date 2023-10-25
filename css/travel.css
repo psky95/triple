@@ -26,14 +26,14 @@
   display: inline-flex;
   width: 100%;
   flex-direction: column;
+  overflow: hidden;
 }
 #travel .wrap ul li a.travel-card1 div.travel-con{
   
   display: grid;
   grid-template-columns: 50% 88px 88px;
-  grid-template-rows: 85px 84px;
+  grid-template-rows: 85px 85px;
   width: 100%;
-  height: 170px;
   gap: 1px;
 }
 #travel .wrap ul li a.travel-card1 div.travel-con img{
@@ -41,9 +41,6 @@
 }
 #travel .wrap ul li a.travel-card1 div.travel-con >.con1{
   
-  border-right: 1px solid white;
-  overflow: hidden;
-  height: 170px;
   grid-row: 1 / 3;
   order: 1;
 }

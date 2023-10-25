@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 #hotel .wrap ul li a .badge-single{
   background: #368fff;
@@ -147,13 +147,6 @@
   opacity: 1;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2); 
 }
-#hotel .slick-prev:hover::before, 
-#hotel .slick-prev:focus::before, 
-#hotel .slick-next:hover::before, 
-#hotel .slick-next:focus::before{
-  
-}
 #hotel .wrap .slick-next:hover, #hotel .wrap .slick-prev:hover{
- 
   opacity: .75;
 }

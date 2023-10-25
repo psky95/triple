@@ -104,8 +104,12 @@
   #header .head div.hmenu > ul li a.plus{
     display: block;
   }
-  #header .head div.flex > ul li:not(.main-nav >ul li, .footer-nav >ul li){
+  #header .head div.flex > ul li:not(.main-nav >ul li, .footer-nav >ul li, .search_box){
     display: none;
+  }
+  #header .head div.flex > ul .search_box{
+    display: block;
+    transform: translateX(120px);
   }
   .plus{
     display: block;
