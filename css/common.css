@@ -9,26 +9,18 @@ body{
 .heith-full{
   height: 100%
 }
-html{
-  height: 100%;
-  font-size: 100%
-}
 .wrap{
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.wrap2{
-  max-width: 1600px;
+  max-width: 120rem;
   margin: 0 auto;
 }
 .hide{
-  display: none;
+  display: none; /* 안보이게 */
 }
 .rbox{
-  width: 300px;
-  height: 300px;
+  width: 30rem;
+  height: 30rem;
   background-color: #eee;
-  border-radius: 20px;
+  border-radius: 2rem;
   text-align: center;
 }
 .bgimg{
@@ -38,32 +30,32 @@ html{
   background-position-y: 10%;
 }
 .padding50{
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .paddingB50{
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
 }
 .paddingB100{
-  padding-bottom: 100px;
+  padding-bottom: 10rem;
 }
 .paddingT50{
-  padding-top: 50px;
+  padding-top: 5rem;
 }
 .paddingT100{
-  padding-top: 100px;
+  padding-top: 10rem;
 }
 .marginB50{
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 .marginB100{
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
 }
 .marginT50{
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 .marginT100{
-  margin-top: 100px;
+  margin-top: 10rem;
 }
 .flex{
   display: flex;
@@ -84,58 +76,65 @@ html{
   text-align: center;
 }
 .h1{
-  font-size: 120px; 
+  font-size: 12rem; 
 }
 .h2{
-  font-size: 60px;
+  font-size: 7rem;
+  font-weight: lighter;
+  text-shadow: #0acdce 1px 0 10px;
 }
 .h3{
-  font-size: 48px;
+  font-size: 4.8rem;
+  text-shadow: #0acdce 0px 0px 10px;
+  font-weight: lighter;
 }
 .h4{
-  font-size: 36px;
-  font-weight: 500;
-  margin-bottom: 50px;
-}
-.ht5{
-  font-size: 22px;
+  font-size: 3.6rem; 
+  font-weight: lighter;
 }
 .h5{
-  font-size: 20px;
+  font-size: 2rem;
 }
 .h6{
-  font-size: 18px; 
+  font-size: 1.8rem; 
+}
+.h7{
+  font-size: 1.7rem;
+}
+.h8{
+  font-size: 1.6rem;
+}
+.h9{
+  font-size: 1.5rem;
 }
 .p{
-  font-size: 16px;  
+  font-size: 1.4rem;  
 }
 .p2{
-  font-size: 15px;  
+  font-size: 1.2rem;
 }
 .block{
   display: block;
 }
 .button{
-width: 35px;
-height: 35px;
+width: 3.5rem;
+height: 3.5rem;
 border-radius: 50%;
 border: none;
 box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 font-size: 0;
 }
 .more{ 
-  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
-  border: 1px solid #e2e2e2;
-  border-radius: 25px;
-  width: 75px;
-  height: 30px;
+  border: 0px solid rgba(10, 205, 206, 0.25);
+  border-radius: 3rem;
+  width: 18rem;
+  height: 5.5rem;
   text-align: center;
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: white;
-  font-size: 16px;
-  padding-left: 15px;
+  background-color: rgba(10, 205, 206, 0.25);
+  cursor: pointer;
 }
 .moreall{
   border: 1px solid #e2e2e2;
@@ -148,15 +147,9 @@ font-size: 0;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
   padding-left: 10px;
 }
-.plus{
-  font-size: 0;
-  width: 33px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  color: black;
-  display: none;
-}
-.plus::before{
-  content: "";
+.fullscreen-bg__image {
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ mix-blend-mode: color-dodge;
 }
