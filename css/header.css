@@ -1,9 +1,5 @@
 #header {
-  
   background-color: white;
-}
-#header .head {
-  
 }
 #header .head div.flex {
   padding-top: 1.25rem;
@@ -33,7 +29,6 @@
   color:black;
 }
 #header .head div.flex form{
-  
   margin-left: 100px;
   position: absolute;
   top: 20px;
@@ -61,6 +56,7 @@
   bottom: 11px;
   border: none;
   cursor: pointer;
+  background: transparent;
 }
 .searchwrap button:hover{
   background-color: transparent;
@@ -78,16 +74,11 @@
 #header .head div.flex h1 input:focus {
     outline: none; 
 }
-
 #header .head div.flex > ul{ 
   display: flex;
   align-items: center;
   padding-right: 15px;
   gap: 25px;
-}
-  
-#header .head div.flex > ul li {
-  
 }
 #header .head div.flex > ul li a:not(#menu a, .search_box a) { 
   padding: 7.5px 7.5px;
@@ -99,20 +90,14 @@
 #header .head div.flex > ul .search_box{
   display: none;
 }
-#header .head div.hmenu {
-  
+#header .head div.hmenu { 
   padding: 20px 0;
 }
 #header .head div.hmenu > ul {
-  
   justify-content: space-between;
   border-bottom: 1px solid #eee;
 }
-#header .head div.hmenu > ul li {
-  
-}
 #header .head div.hmenu > ul li a {
-
   padding: 15px 15px;
   display: flex;
   position: relative;
@@ -128,7 +113,6 @@
   background-size: contain;
 }
 #header .head div.hmenu > ul li:nth-child(1) a::before{
-  
   background-image: url(../img/t1.svg);
 }
 #header .head div.hmenu > ul li:nth-child(2) a::before{
