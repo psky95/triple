@@ -2,25 +2,14 @@
   background-color: #f5f5f5;
 }
 #item .wrap {
-  
   position: relative;
-}
-#item .wrap h2 {
-  
-}
-#item .wrap ul.itemslick {
-  
 }
 #item .wrap ul.itemslick .itemlist {
   display: flex !important;
   flex-direction: column;
   align-items: center;
 }
-#item .wrap ul.itemslick .itemlist a {
-  
-}
 #item .wrap ul.itemslick .itemlist a img {
-  
   width: 370px;
   height: 250px;
   border-radius: 10px;
@@ -38,24 +27,15 @@
   overflow: hidden;
 }
 #item .wrap ul.itemslick .itemlist a section .pgroup {
-  
   gap: 10px;
   align-items: center;
   font-weight: 300;
-}
-#item .wrap ul.itemslick .itemlist a section .pgroup .region {
-  
 }
 #item .wrap ul.itemslick .itemlist a section .pgroup .region::before{
   content: "\2022";
   margin-right: 8px;
 }
-
-#item .wrap ul.itemslick .itemlist a section .pgroup .region > span {
-  
-}
 #item .wrap ul.itemslick .itemlist a section .pgroup .rating-box {
-
   display: flex;
   align-items: center;
 }
@@ -82,7 +62,6 @@
   margin-left: 10px;
 }
 #item .wrap ul.itemslick .itemlist a section .price {
-  
   font-size: 1.25rem;
   line-height: 1.6;
   font-weight: 700;
@@ -90,19 +69,16 @@
   margin-top: 10px;
 }
 #item .wrap ul.itemslick .itemlist a section .price .dc {
-  
   color: red;
   margin-right: 10px;
   font-weight: 600;
 }
 #item .wrap a.more {
-  
   position: absolute;
   top: 104px;
   right: 15px;
 }
 #item .wrap a.more span{
-  
   background-image: url(../img/arrowR.svg);
   width: 28px;
   height: 28px;
@@ -110,23 +86,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-#item .wrap a.more span::before{
-  
-}
-
 /* 아이템css 슬릭 스타일 */
-
 #item .wrap .slick-prev{
-  
   left: -15px;
 }
 #item .wrap .slick-prev,
 #item .wrap .slick-next{
-  
   top: 35%;
 }
 #item .wrap .slick-next{
-  
   right: -15px;
 }
 #item .wrap .slick-dots{ 
