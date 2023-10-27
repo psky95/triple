@@ -5,27 +5,19 @@
   align-items: center;
   min-height: 88rem;
 }
-  
 #about .wrap { 
   display: flex;
-  
 }
 #about .wrap .hello{
-  
   width: calc(100% - 35%);
   color: #ccc;
 }
-  
-#about .wrap figure {
-  
+#about .wrap figure { 
   width: calc(100% - 65%);
 }
-#about .wrap figure
-  
 #about .wrap figure img {
   padding-right: 40px;
 }
-  
 #about .wrap div.about {
   width: 100%;
   flex-direction: column;
@@ -33,21 +25,17 @@
   border-bottom: 1px solid #ccc;
   padding: 30px 0;
 }
-  
 #about .wrap div.hello h2 {
   font-size: 4.8rem;
   font-weight: 700;
   color: #fff;
 }
-  
 #about .wrap div.about p {
   line-height: 1.8;
 }
 #about .wrap div.about p span{
-  
   color: rgb(10, 205, 206);
 }
-  
 /*  구분선  */
 #about .wrap div.career{  
   display: flex;
