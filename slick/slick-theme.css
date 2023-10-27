@@ -35,8 +35,7 @@
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .slick-prev:hover,
-.slick-next:hover,
-{
+.slick-next:hover{
     color: transparent;
     outline: none;
     opacity: 0.75;
