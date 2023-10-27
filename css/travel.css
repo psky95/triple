@@ -1,21 +1,13 @@
-#travel {
-  
-}
 #travel .wrap {
-  
   position: relative;
 }
-#travel .wrap h2 {
-}
 #travel .wrap ul {
-
   display: flex;
   flex-wrap: wrap;
   gap: 45px;
   justify-content: center;
 }
 #travel .wrap ul li {
-
   width: 355px;
   height: 340px;
   border-radius: 10px;
@@ -29,18 +21,13 @@
   overflow: hidden;
 }
 #travel .wrap ul li a.travel-card1 div.travel-con{
-  
   display: grid;
   grid-template-columns: 50% 88px 88px;
   grid-template-rows: 85px 85px;
   width: 100%;
   gap: 1px;
 }
-#travel .wrap ul li a.travel-card1 div.travel-con img{
-  
-}
 #travel .wrap ul li a.travel-card1 div.travel-con >.con1{
-  
   grid-row: 1 / 3;
   order: 1;
 }
@@ -50,7 +37,6 @@
   height: 100%;
 }
 #travel .wrap ul li a.travel-card1 div.travel-con > .con2{
-
   order: 2;
 }
 #travel .wrap ul li a.travel-card1 div.travel-con > .con2 img{
@@ -58,7 +44,6 @@
   height: 100%;
 }
 #travel .wrap ul li a.travel-card1 div.travel-con > .con3{
-
   order: 3;
   overflow: hidden;
 }
@@ -83,7 +68,6 @@
   height: 100%;
 }
 #travel .wrap ul li a.travel-card1 .con6{
-  
   height: 170px;
   display: flex;
   flex-flow: column;
@@ -93,7 +77,6 @@
   box-sizing: border-box;
 }
 #travel .wrap ul li a.travel-card1 .con6 h3{
-  
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -102,17 +85,12 @@
   line-height: 2;
 }
 #travel .wrap ul li a.travel-card1 .con6 .schedule{
-  
   color: rgba(58, 58, 58, 0.5);
   order: 1;
   font-weight: 500;
   margin-top: 10px;
 }
-#travel .wrap ul li a.travel-card1 .con6 .day{
-  
-}
 #travel .wrap ul li a.travel-card1 .con6 .travel-ct{
-  
   order: 3;
   color: rgba(58, 58, 58, 1);
   font-weight: 400;
@@ -122,13 +100,11 @@
   overflow: hidden;
 }
 #travel .wrap ul li a.travel-card1 .con6 .travel-ct .block{
-  
   line-height: 1.2;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 #travel .wrap ul li a.travel-card1 .con6 figure{
-  
   position: absolute;
   width: 42px;
   height: 42px;
@@ -136,37 +112,31 @@
   left: 20px;
 }
 #travel .wrap ul li a.travel-card1 .con6 figure img{
-  
   width: 100%;
   height: 100%;
   border-radius: 100%;
   border: 2px solid white;
 }
 #travel .wrap ul li a.travel-card2{
-  
   height: 100%;
   display: inline-flex;
   width: 100%;
   flex-direction: column;
 }
 #travel .wrap ul li a.travel-card2 .travel-con{
-  
   width: 100%;
 }
 #travel .wrap ul li a.travel-card2 .travel-con .con1{
-  
   border-right: 1px solid white;
   overflow: hidden;
   height: 170px;
 }
 #travel .wrap ul li a.travel-card2 .travel-con .con1 >img{
-  
   border-radius: 10px 10px 0 0;
   width: 100%;
   height: 100%;
 }
 #travel .wrap ul li a.travel-card2 .con6{
-  
   height: 170px;
   display: flex;
   flex-flow: column;
@@ -176,7 +146,6 @@
   box-sizing: border-box;
 }
 #travel .wrap ul li a.travel-card2 .con6 h3{
-  
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -185,30 +154,23 @@
   line-height: 2;
 }
 #travel .wrap ul li a.travel-card2 .con6 .schedule{
-  
   color: rgba(58, 58, 58, 0.5);
   order: 1;
   font-weight: 500;
   margin-top: 10px;
 }
-#travel .wrap ul li a.travel-card2 .con6 .day{
-  
-}
 #travel .wrap ul li a.travel-card2 .con6 .travel-ct{
-  
   order: 3;
   color: rgba(58, 58, 58, 1);
   font-weight: 400;
   line-height: 1.2;
 }
 #travel .wrap ul li a.travel-card2 .con6 .block{
-  
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 #travel .wrap ul li a.travel-card2 .con6 figure{
-  
   position: absolute;
   width: 42px;
   height: 42px;
@@ -216,14 +178,12 @@
   left: 20px;
 }
 #travel .wrap ul li a.travel-card2 .con6 figure img{
-  
   width: 100%;
   height: 100%;
   border-radius: 100%;
   border: 2px solid white;
 }
 #travel .wrap .more{
-  
   position: absolute;
   top: 104px;
   right: 15px;
@@ -231,7 +191,6 @@
   border: 1px solid #e2e2e2;
 }
 #travel .wrap .more span{
-  
   background-image: url(../img/arrowR.svg);
   width: 28px;
   height: 28px;
