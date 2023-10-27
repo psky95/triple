@@ -189,7 +189,7 @@
   #hotple .wrap ul .slick-dots{
     
   bottom: -25px;
-  transform: scale(85%);
+  transform: scale(0.85);
   }
   /* 인기 호텔 */
   #hotel .wrap ul .hotellist{
@@ -244,7 +244,7 @@
   #hotel .wrap ul .slick-dots{
     
   bottom: -45px;
-  transform: scale(85%);
+  transform: scale(0.85);
   }
   #hotel .slick-list{
   overflow: initial;
