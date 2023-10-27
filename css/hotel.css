@@ -1,14 +1,5 @@
-#hotel {
-  
-}
 #hotel .wrap {
-  
   position: relative;
-}
-#hotel .wrap h2 {
-}
-#hotel .wrap ul {
-  
 }
 #hotel .wrap ul .slick-dots{
   bottom: -50px;
@@ -30,7 +21,6 @@
   background-repeat: no-repeat;
 }
 #hotel .wrap ul li a .badgebox{
-
   position: absolute;
   left: 20px;
   top: 10px;
@@ -49,37 +39,26 @@
   color: white;
   padding: 6px 7px;
 }
-#hotel .wrap ul li a section {
-  
-}
 #hotel .wrap ul li a section p.price{
-  
   font-size: 2rem;
   line-height: 1.6;
   font-weight: 700;
   margin-top: 10px;
 }
-#hotel .wrap ul li a section p.price >span{
-  
-}
 #hotel .wrap ul li a section p.price span:nth-child(1){
-  
   color: red;
   margin-right: 10px;
   font-weight: 600;
 }
 #hotel .wrap ul li a section p.price >.block{
-  
   font-weight: 500;
 }
 #hotel .wrap ul li a section h3 {  
   font-weight: 600;
   line-height: 1.6;
   margin-top: 10px;
-
 }
 #hotel .wrap ul li a section div.pgroup {
-  
   display: flex;
   align-items: center;
   font-weight: 300;
@@ -117,17 +96,12 @@
     content: "\2022";
     margin-right: 8px; 
   }
-#hotel .wrap ul li a section p span span.blcok {
-  
-}
 #hotel .wrap a.more {
-  
   position: absolute;
   top: 104px;
   right: 15px;
 }
 #hotel .wrap a.more span{
-  
   background-image: url(../img/arrowR.svg);
   width: 28px;
   height: 28px;
